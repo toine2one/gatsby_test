@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -6,5 +8,9 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
 }
