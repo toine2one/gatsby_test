@@ -4,7 +4,7 @@ import * as styles from "./FactionSection.module.scss"
 
 import React from "react"
 
-export default function FactionSection({ data }) {
+export default function FactionSection({ images }) {
   return (
     <PageSection classes={styles.factionSection}>
       <h1>Factions</h1>
@@ -14,24 +14,22 @@ export default function FactionSection({ data }) {
           <div className="col col-lg-3">
             <GatsbyImage
               loading="lazy"
-              image={getImage(data.factionContainerEco)}
+              image={getImage(images[0])}
             ></GatsbyImage>
           </div>
           <div className="col col-lg-3">
             <GatsbyImage
               loading="lazy"
-              image={getImage(data.factionContainerTech)}
+              image={getImage(images[1])}
             ></GatsbyImage>
           </div>
           <div className="col col-lg-3">
-            <GatsbyImage
-              image={getImage(data.factionContainerIndustrial)}
-            ></GatsbyImage>
+            <GatsbyImage image={getImage(images[2])}></GatsbyImage>
           </div>
           <div className="col col-lg-3">
             <GatsbyImage
               loading="lazy"
-              image={getImage(data.factionContainerTraditional)}
+              image={getImage(images[3])}
             ></GatsbyImage>
           </div>
         </div>
