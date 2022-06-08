@@ -5,6 +5,7 @@ import * as styles from "./FactionSection.module.scss"
 import React from "react"
 
 export default function FactionSection({ images }) {
+  console.log(images)
   return (
     <PageSection classes={styles.factionSection}>
       <h1>Factions</h1>
