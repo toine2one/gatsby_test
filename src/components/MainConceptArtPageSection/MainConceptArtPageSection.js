@@ -1,17 +1,26 @@
 import React from "react"
 import * as styles from "./MainConceptArtPageSection.module.scss"
 
-export default function MainConceptArtPageSection({ backgroundImgPath }) {
+export default function MainConceptArtPageSection({
+  backgroundImgPath,
+  backgroundPlaceholderImgPath,
+  children,
+}) {
   const backgroundStyle = {
-    backgroundImage: `url(${backgroundImgPath})`,
+    backgroundImage: `url(${backgroundPlaceholderImgPath})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "auto 100vh",
+    backgroundColor: "gray",
   }
 
   return (
-    <section className={styles.container} style={backgroundStyle}>
-      <h1>Some section TEXT here</h1>
+    <section
+      className={`${styles.container} lazy-style`}
+      data-bg-img={backgroundImgPath}
+      style={backgroundStyle}
+    >
+      {children}
     </section>
   )
 }

@@ -6,10 +6,15 @@ export default function PageSection({
   backgroundImagePath,
   backgroundImageName,
   backgroundImage,
+  classes,
 }) {
   return (
-    <div className={styles.container}>
-      <img src={backgroundImagePath} alt={backgroundImageName} />
+    <div className={`${styles.container} ${classes}`}>
+      <img
+        className={styles.bgImg}
+        src={backgroundImagePath}
+        alt={backgroundImageName}
+      />
       <div className={styles.content}>{children}</div>
     </div>
   )
