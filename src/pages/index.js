@@ -29,7 +29,6 @@ export default function Home({ data }) {
           <h1>Blockchain Metaverse</h1>
         </div>
       </MainConceptArtPageSection>
-
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -38,7 +37,6 @@ export default function Home({ data }) {
           data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
         }
       ></MainConceptArtPageSection>
-
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -78,7 +76,15 @@ export default function Home({ data }) {
           </div>
         </div>
       </MainConceptArtPageSection>
-
+      //{" "}
+      <FactionSection
+        images={[
+          data.factionContainerEco,
+          data.factionContainerTech,
+          data.factionContainerIndustrial,
+          data.factionContainerTraditional,
+        ]}
+      ></FactionSection>
       <GameIntroSection data={data}></GameIntroSection>
     </MainLayout>
   )
