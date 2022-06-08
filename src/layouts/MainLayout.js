@@ -5,11 +5,9 @@ export default function MainLayout({ children }) {
   useEffect(() => {
     // var lazyloadImages
     // var lazyloadStyle
-
     // if ("IntersectionObserver" in window) {
     //   lazyloadImages = document.querySelectorAll(".lazy")
     //   lazyloadStyle = document.querySelectorAll(".lazy-style")
-
     //   var imageObserver = new IntersectionObserver(function (
     //     entries,
     //     observer
@@ -20,30 +18,25 @@ export default function MainLayout({ children }) {
     //         image.src = image.dataset.src
     //         image.classList.remove("lazy")
     //         imageObserver.unobserve(image)
-
     //         if (entry.target.classList.contains("lazy-style")) {
     //           entry.target.style.backgroundImage = `url(${entry.target.dataset.bgImg})`
     //         }
     //       }
     //     })
     //   })
-
     //   lazyloadImages.forEach(function (image) {
     //     imageObserver.observe(image)
     //   })
-
     //   lazyloadStyle.forEach(function (styleElement) {
     //     imageObserver.observe(styleElement)
     //   })
     // } else {
     //   var lazyloadThrottleTimeout
     //   lazyloadImages = document.querySelectorAll(".lazy")
-
     //   function lazyload() {
     //     if (lazyloadThrottleTimeout) {
     //       clearTimeout(lazyloadThrottleTimeout)
     //     }
-
     //     lazyloadThrottleTimeout = setTimeout(function () {
     //       var scrollTop = window.pageYOffset
     //       lazyloadImages.forEach(function (img) {
@@ -58,12 +51,11 @@ export default function MainLayout({ children }) {
     //         window.removeEventListener("orientationChange", lazyload)
     //       }
     //     }, 20)
-      }
-
-      document.addEventListener("scroll", lazyload)
-      window.addEventListener("resize", lazyload)
-      window.addEventListener("orientationChange", lazyload)
-    }
+    //   }
+    //   document.addEventListener("scroll", lazyload)
+    //   window.addEventListener("resize", lazyload)
+    //   window.addEventListener("orientationChange", lazyload)
+    // }
   }, [])
 
   return (
