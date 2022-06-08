@@ -120,7 +120,11 @@ export const bgImageQuery = graphql`
 export const defaultImageQuery = graphql`
   fragment defaultImageQuery on File {
     childImageSharp {
-      gatsbyImageData(quality: 100)
+      gatsbyImageData(
+        blurredOptions: { width: 10 }
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
