@@ -21,7 +21,7 @@ export default function Home({ data }) {
       >
         <div className={styles.topSection}>
           <GatsbyImage
-            loading="lazy"
+            loading="eager"
             className={styles.playbutton}
             image={getImage(data.playbutton)}
             alt="Video play button"
