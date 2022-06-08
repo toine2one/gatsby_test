@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PageSection from "../../components/PageSection/PageSection"
 import * as styles from "./GameIntroSection.module.scss"
 
-export default function GameIntroSection({ data }) {
+export default function GameIntroSection() {
   return (
     <PageSection classes={styles.gameIntroSection}>
       <div className="container">
@@ -20,12 +20,7 @@ export default function GameIntroSection({ data }) {
               ideal society.
             </p>
           </div>
-          <div className="col col-lg-6">
-            <GatsbyImage
-              loading="lazy"
-              image={getImage(data.gameplayProductionFrame)}
-            ></GatsbyImage>
-          </div>
+          <div className="col col-lg-6"></div>
         </div>
       </div>
     </PageSection>
