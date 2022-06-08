@@ -79,14 +79,6 @@ export default function Home({ data }) {
         </div>
       </MainConceptArtPageSection>
 
-      <FactionSection
-        images={[
-          data.factionContainerEco,
-          data.factionContainerTech,
-          data.factionContainerIndustrial,
-          data.factionContainerTraditional,
-        ]}
-      ></FactionSection>
       <GameIntroSection data={data}></GameIntroSection>
     </MainLayout>
   )
