@@ -70,7 +70,6 @@ export default function Home({ data }) {
                 className={`${styles.graphic} col-lg-6 d-flex justify-content-center`}
               >
                 <GatsbyImage
-                  loading="lazy"
                   image={getImage(data.legacyWhitepaperGraphic)}
                 ></GatsbyImage>
               </div>
@@ -85,25 +84,21 @@ export default function Home({ data }) {
           <div className="row">
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="lazy"
                 image={getImage(data.factionContainerEco)}
               ></GatsbyImage>
             </div>
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="lazy"
                 image={getImage(data.factionContainerTech)}
               ></GatsbyImage>
             </div>
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="lazy"
                 image={getImage(data.factionContainerIndustrial)}
               ></GatsbyImage>
             </div>
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="lazy"
                 image={getImage(data.factionContainerTraditional)}
               ></GatsbyImage>
             </div>
