@@ -2,7 +2,7 @@ import React from "react"
 import MainLayout from "../layouts/MainLayout"
 import MainConceptArtPageSection from "../components/MainConceptArtPageSection/MainConceptArtPageSection"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
 
