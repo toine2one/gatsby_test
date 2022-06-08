@@ -11,7 +11,6 @@ export default function MainConceptArtPageSection({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "auto 100vh",
-    backgroundColor: "gray",
   }
 
   return (
@@ -20,6 +19,11 @@ export default function MainConceptArtPageSection({
       data-bg-img={backgroundImgPath}
       style={backgroundStyle}
     >
+      <img
+        className={styles.bgImg}
+        src={backgroundPlaceholderImgPath}
+        alt="Background placeholder"
+      />
       {children}
     </section>
   )

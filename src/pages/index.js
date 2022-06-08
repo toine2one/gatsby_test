@@ -4,7 +4,8 @@ import MainConceptArtPageSection from "../components/MainConceptArtPageSection/M
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
-import PageSection from "../components/PageSection/PageSection"
+import FactionSection from "./sections/FactionSection"
+import GameIntroSection from "./sections/GameIntroSection"
 
 export default function Home({ data }) {
   console.log(data)
@@ -12,7 +13,7 @@ export default function Home({ data }) {
     <MainLayout>
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
-          data.bg1.childImageSharp.gatsbyImageData.placeholder.fallback.src
+          data.bg1.childImageSharp.gatsbyImageData.placeholder.fallback
         }
         backgroundImgPath={
           data.bg1.childImageSharp.gatsbyImageData.images.fallback.src
@@ -31,7 +32,7 @@ export default function Home({ data }) {
 
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
-          data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback.src
+          data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
         }
         backgroundImgPath={
           data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
@@ -40,7 +41,7 @@ export default function Home({ data }) {
 
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
-          data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback.src
+          data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
         }
         backgroundImgPath={
           data.bg3.childImageSharp.gatsbyImageData.images.fallback.src
@@ -79,37 +80,9 @@ export default function Home({ data }) {
           </div>
         </div>
       </MainConceptArtPageSection>
-      <PageSection classes={styles.factionSection}>
-        <h1>Factions</h1>
-        <h2>Which side will you take</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerEco)}
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerTech)}
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                image={getImage(data.factionContainerIndustrial)}
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerTraditional)}
-              ></GatsbyImage>
-            </div>
-          </div>
-        </div>
-      </PageSection>
+
+      <FactionSection data={data}></FactionSection>
+      <GameIntroSection data={data}></GameIntroSection>
     </MainLayout>
   )
 }
@@ -186,6 +159,12 @@ export const query = graphql`
       relativePath: {
         eq: "factions/factionContainers/traditional_select_container.png"
       }
+    ) {
+      ...defaultImageQuery
+    }
+
+    gameplayProductionFrame: file(
+      relativePath: { eq: "gameplay/production_gameplay_frame.png" }
     ) {
       ...defaultImageQuery
     }

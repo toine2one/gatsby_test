@@ -1,0 +1,22 @@
+@import "../../styles/colors";
+
+.game-intro-section {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .info {
+    h3 {
+      color: white;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+  }
+}
