@@ -122,7 +122,7 @@ export const defaultImageQuery = graphql`
     childImageSharp {
       gatsbyImageData(
         blurredOptions: { width: 10 }
-        placeholder: BLURRED
+        placeholder: TRACED_SVG
         quality: 100
       )
     }
