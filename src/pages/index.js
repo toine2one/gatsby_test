@@ -4,7 +4,6 @@ import MainConceptArtPageSection from "../components/MainConceptArtPageSection/M
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
-import FactionSection from "./sections/FactionSection"
 import GameIntroSection from "./sections/GameIntroSection"
 
 export default function Home({ data }) {
