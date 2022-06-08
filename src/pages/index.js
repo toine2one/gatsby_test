@@ -68,9 +68,7 @@ export default function Home({ data }) {
                   society would serve as an example for all others to follow.
                 </p>
               </div>
-              <div
-                className={`${styles.graphic} col-lg-6 d-flex justify-content-center`}
-              >
+              <div className={`col-lg-6 d-flex justify-content-center`}>
                 <GatsbyImage
                   loading="lazy"
                   image={getImage(data.legacyWhitepaperGraphic)}
