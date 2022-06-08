@@ -20,7 +20,7 @@ export default function Home({ data }) {
       >
         <div className={styles.topSection}>
           <GatsbyImage
-            loading="eager"
+            loading="lazy"
             className={styles.playbutton}
             image={getImage(data.playbutton)}
             alt="Video play button"
@@ -71,6 +71,7 @@ export default function Home({ data }) {
                 className={`${styles.graphic} col-lg-6 d-flex justify-content-center`}
               >
                 <GatsbyImage
+                  loading="lazy"
                   image={getImage(data.legacyWhitepaperGraphic)}
                 ></GatsbyImage>
               </div>
@@ -85,13 +86,13 @@ export default function Home({ data }) {
           <div className="row">
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="eager"
+                loading="lazy"
                 image={getImage(data.factionContainerEco)}
               ></GatsbyImage>
             </div>
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="eager"
+                loading="lazy"
                 image={getImage(data.factionContainerTech)}
               ></GatsbyImage>
             </div>
@@ -102,7 +103,7 @@ export default function Home({ data }) {
             </div>
             <div className="col col-lg-3">
               <GatsbyImage
-                loading="eager"
+                loading="lazy"
                 image={getImage(data.factionContainerTraditional)}
               ></GatsbyImage>
             </div>
