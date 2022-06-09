@@ -17,7 +17,7 @@ export default function TeamMember({ name, role, bio, image }) {
           <div className={styles.teamMemberInfoName}>
             <p>{name}</p>
           </div>
-          <div className={styles.teamMemberRole}>
+          <div className={styles.teamMemberInfoRole}>
             <p>{role}</p>
           </div>
           <div className={styles.teamMemberSocial}>
