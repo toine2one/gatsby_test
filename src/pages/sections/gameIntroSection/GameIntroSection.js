@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import PageSection from "../../components/PageSection/PageSection"
+import PageSection from "../../../components/PageSection/PageSection"
 import * as styles from "./GameIntroSection.module.scss"
 
 export default function GameIntroSection({ image }) {

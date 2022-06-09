@@ -4,8 +4,10 @@ import MainConceptArtPageSection from "../components/MainConceptArtPageSection/M
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
-import PageSection from "../components/PageSection/PageSection"
-import GameIntroSection from "./sections/GameIntroSection"
+import GameIntroSection from "./sections/gameIntroSection/GameIntroSection"
+import WalletIntroSection from "./sections/walletIntroSection/WalletIntroSection"
+import FactionSection from "./sections/factionSection/FactionSection"
+import TeamSection from "./sections/teamSection/TeamSection"
 
 export default function Home({ data }) {
   console.log(data)
@@ -80,70 +82,18 @@ export default function Home({ data }) {
         </div>
       </MainConceptArtPageSection>
 
-      <PageSection classes={styles.factionSection}>
-        <h1>Factions</h1>
-        <h2>Which side will you take</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerEco)}
-                alt="Eco faction container"
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerTech)}
-                alt="Tech faction container"
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                image={getImage(data.factionContainerIndustrial)}
-                alt="Industrial faction container"
-              ></GatsbyImage>
-            </div>
-            <div className="col col-lg-3">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.factionContainerTraditional)}
-                alt="Traditional faction container"
-              ></GatsbyImage>
-            </div>
-          </div>
-        </div>
-      </PageSection>
+      <FactionSection
+        images={[
+          data.factionContainerEco,
+          data.factionContainerTech,
+          data.factionContainerIndustrial,
+          data.factionContainerTraditional,
+        ]}
+      ></FactionSection>
 
       <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection>
-      {/* <PageSection classes={styles.factionSection}>
-        <div className="container">
-          <div className="row">
-            <div className={`${styles.info} col col-lg-6`}>
-              <h3>A World Based On</h3>
-              <h1>The Lost Revolutionary White Paper</h1>
-              <p>
-                A few years after Satoshi Nakamoto’s Bitcoin white paper changed
-                the world, another white paper of mysterious origin created a
-                stir. Satoshi’s work states that the world is due for economic
-                collapse due to its reliance on fiat currency. It would take
-                only one crisis, such as climate change, to unleash an
-                unmitigated global catastrophe. His startling proposal:
-                Cryptopia World, a nation based on the blockchain, a new society
-                would serve as an example for all others to follow.
-              </p>
-            </div>
-            <div className="col col-lg-6">
-              <GatsbyImage
-                loading="lazy"
-                image={getImage(data.gameplayProductionFrame)}
-                alt="Gameplay production frame"
-              ></GatsbyImage>
-            </div>
-          </div>
-        </div>
-      </PageSection> */}
+      <WalletIntroSection image={data.walletFrame}></WalletIntroSection>
+      <TeamSection></TeamSection>
     </MainLayout>
   )
 }
@@ -227,6 +177,10 @@ export const query = graphql`
     gameplayProductionFrame: file(
       relativePath: { eq: "gameplay/production_gameplay_frame.png" }
     ) {
+      ...defaultImageQuery
+    }
+
+    walletFrame: file(relativePath: { eq: "wallet/wallet_frame_mobile.png" }) {
       ...defaultImageQuery
     }
   }
