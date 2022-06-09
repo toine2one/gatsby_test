@@ -15,7 +15,7 @@ export default function PageSection({
         src={backgroundImagePath}
         alt={backgroundImageName}
       />
-      <div className={styles.content}>{children}</div>
+      <div>{children}</div>
     </div>
   )
 }

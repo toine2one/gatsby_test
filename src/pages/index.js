@@ -4,7 +4,7 @@ import MainConceptArtPageSection from "../components/MainConceptArtPageSection/M
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
-import GameIntroSection from "./sections/GameIntroSection"
+import PageSection from "../components/PageSection/PageSection"
 
 export default function Home({ data }) {
   console.log(data)
@@ -20,7 +20,7 @@ export default function Home({ data }) {
       >
         <div className={styles.topSection}>
           <GatsbyImage
-            loading="eager"
+            loading="lazy"
             className={styles.playbutton}
             image={getImage(data.playbutton)}
             alt="Video play button"
@@ -28,6 +28,7 @@ export default function Home({ data }) {
           <h1>Blockchain Metaverse</h1>
         </div>
       </MainConceptArtPageSection>
+
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -36,6 +37,7 @@ export default function Home({ data }) {
           data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
         }
       ></MainConceptArtPageSection>
+
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -69,22 +71,77 @@ export default function Home({ data }) {
                 <GatsbyImage
                   loading="lazy"
                   image={getImage(data.legacyWhitepaperGraphic)}
+                  alt="Legacy whitepaper graphic"
                 ></GatsbyImage>
               </div>
             </div>
           </div>
         </div>
       </MainConceptArtPageSection>
-      //{" "}
-      <FactionSection
-        images={[
-          data.factionContainerEco,
-          data.factionContainerTech,
-          data.factionContainerIndustrial,
-          data.factionContainerTraditional,
-        ]}
-      ></FactionSection>
-      <GameIntroSection data={data}></GameIntroSection>
+
+      <PageSection classes={styles.factionSection}>
+        <h1>Factions</h1>
+        <h2>Which side will you take</h2>
+        <div className="container">
+          <div className="row">
+            <div className="col col-lg-3">
+              <GatsbyImage
+                loading="lazy"
+                image={getImage(data.factionContainerEco)}
+                alt="Eco faction container"
+              ></GatsbyImage>
+            </div>
+            <div className="col col-lg-3">
+              <GatsbyImage
+                loading="lazy"
+                image={getImage(data.factionContainerTech)}
+                alt="Tech faction container"
+              ></GatsbyImage>
+            </div>
+            <div className="col col-lg-3">
+              <GatsbyImage
+                image={getImage(data.factionContainerIndustrial)}
+                alt="Industrial faction container"
+              ></GatsbyImage>
+            </div>
+            <div className="col col-lg-3">
+              <GatsbyImage
+                loading="lazy"
+                image={getImage(data.factionContainerTraditional)}
+                alt="Traditional faction container"
+              ></GatsbyImage>
+            </div>
+          </div>
+        </div>
+      </PageSection>
+
+      <PageSection classes={styles.factionSection}>
+        <div className="container">
+          <div className="row">
+            <div className={`${styles.info} col col-lg-6`}>
+              <h3>A World Based On</h3>
+              <h1>The Lost Revolutionary White Paper</h1>
+              <p>
+                A few years after Satoshi Nakamoto’s Bitcoin white paper changed
+                the world, another white paper of mysterious origin created a
+                stir. Satoshi’s work states that the world is due for economic
+                collapse due to its reliance on fiat currency. It would take
+                only one crisis, such as climate change, to unleash an
+                unmitigated global catastrophe. His startling proposal:
+                Cryptopia World, a nation based on the blockchain, a new society
+                would serve as an example for all others to follow.
+              </p>
+            </div>
+            <div className="col col-lg-6">
+              <GatsbyImage
+                loading="lazy"
+                image={getImage(data.gameplayProductionFrame)}
+                alt="Gameplay production frame"
+              ></GatsbyImage>
+            </div>
+          </div>
+        </div>
+      </PageSection>
     </MainLayout>
   )
 }
