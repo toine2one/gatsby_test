@@ -115,6 +115,7 @@ export default function Home({ data }) {
         </div>
       </PageSection>
 
+      {/* <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection> */}
       <PageSection classes={styles.factionSection}>
         <div className="container">
           <div className="row">
