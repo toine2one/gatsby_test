@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
+import GameIntroSection from "./sections/GameIntroSection"
 
 export default function Home({ data }) {
   console.log(data)
@@ -115,8 +116,8 @@ export default function Home({ data }) {
         </div>
       </PageSection>
 
-      {/* <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection> */}
-      <PageSection classes={styles.factionSection}>
+      <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection>
+      {/* <PageSection classes={styles.factionSection}>
         <div className="container">
           <div className="row">
             <div className={`${styles.info} col col-lg-6`}>
@@ -142,7 +143,7 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
-      </PageSection>
+      </PageSection> */}
     </MainLayout>
   )
 }
