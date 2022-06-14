@@ -4,13 +4,17 @@ import MainConceptArtPageSection from "../components/MainConceptArtPageSection/M
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./index.module.scss"
-import GameIntroSection from "./sections/gameIntroSection/GameIntroSection"
-import WalletIntroSection from "./sections/walletIntroSection/WalletIntroSection"
-import FactionSection from "./sections/factionSection/FactionSection"
-import TeamSection from "./sections/teamSection/TeamSection"
+import GameIntroSection from "../sections/gameIntroSection/GameIntroSection"
+import WalletIntroSection from "../sections/walletIntroSection/WalletIntroSection"
+import FactionSection from "../sections/factionSection/FactionSection"
+import TeamSection from "../sections/teamSection/TeamSection"
+import Modal from "../components/Modal/Modal"
+import useModal from "../hooks/useModal"
+import RoadmapSection from "../sections/roadmapSection/RoadmapSection"
 
 export default function Home({ data }) {
-  console.log(data)
+  const { isShowing, toggle } = useModal()
+
   return (
     <MainLayout>
       <MainConceptArtPageSection
@@ -22,13 +26,26 @@ export default function Home({ data }) {
         }
       >
         <div className={styles.topSection}>
-          <GatsbyImage
-            loading="lazy"
-            className={styles.playbutton}
-            image={getImage(data.playbutton)}
-            alt="Video play button"
-          ></GatsbyImage>
+          <div onClick={toggle}>
+            <GatsbyImage
+              loading="lazy"
+              className={styles.playbutton}
+              image={getImage(data.playbutton)}
+              alt="Video play button"
+            ></GatsbyImage>
+          </div>
           <h1>Blockchain Metaverse</h1>
+          <Modal isShowing={isShowing} hide={toggle}>
+            <div className={styles.videoContainer}>
+              <iframe
+                src="https://www.youtube.com/embed/-g3gXKg_13w"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </Modal>
         </div>
       </MainConceptArtPageSection>
 
@@ -93,7 +110,8 @@ export default function Home({ data }) {
 
       <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection>
       <WalletIntroSection image={data.walletFrame}></WalletIntroSection>
-      <TeamSection></TeamSection>
+      <TeamSection imageData={data}></TeamSection>
+      <RoadmapSection></RoadmapSection>
     </MainLayout>
   )
 }
@@ -181,6 +199,104 @@ export const query = graphql`
     }
 
     walletFrame: file(relativePath: { eq: "wallet/wallet_frame_mobile.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarAmi: file(relativePath: { eq: "team/avatars/ami_avatar.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarDavid: file(
+      relativePath: { eq: "team/avatars/David_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarDivesh: file(
+      relativePath: { eq: "team/avatars/Divesh_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarErik: file(relativePath: { eq: "team/avatars/erik_avatar.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarFrank: file(
+      relativePath: { eq: "team/avatars/frank_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarHansco: file(
+      relativePath: { eq: "team/avatars/hansco_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarJon: file(relativePath: { eq: "team/avatars/jon_avatar.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarLauderic: file(
+      relativePath: { eq: "team/avatars/Lauderic_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarMaarten: file(
+      relativePath: { eq: "team/avatars/maarten_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarMarkA: file(
+      relativePath: { eq: "team/avatars/mark_a_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarMateo: file(
+      relativePath: { eq: "team/avatars/mateo_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarMatt: file(relativePath: { eq: "team/avatars/matt_avatar.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarOguz: file(relativePath: { eq: "team/avatars/oguz_avatar.png" }) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarPichapen: file(
+      relativePath: { eq: "team/avatars/Pichapen_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarSangho: file(
+      relativePath: { eq: "team/avatars/sangho_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarStefan: file(
+      relativePath: { eq: "team/avatars/stefan_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarToine: file(
+      relativePath: { eq: "team/avatars/toine_avatar.png" }
+    ) {
+      ...defaultImageQuery
+    }
+
+    teamAvatarZimri: file(
+      relativePath: { eq: "team/avatars/zimri_avatar.png" }
+    ) {
       ...defaultImageQuery
     }
   }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.575" height="15.183" viewBox="0 0 16.575 15.183">
+  <g id="icon_social_comment" transform="translate(-8 -8.112)">
+    <path id="Path_6689" data-name="Path 6689" d="M23,8.112H9.574A1.575,1.575,0,0,0,8,9.686V18.4a1.575,1.575,0,0,0,1.574,1.574h6.284l3.975,3.049a.929.929,0,0,0,1.583-.659v-2.39H23A1.575,1.575,0,0,0,24.575,18.4V9.686A1.575,1.575,0,0,0,23,8.112ZM23.146,18.4a.145.145,0,0,1-.144.144H19.987v2.616l-3.54-2.616H9.574a.145.145,0,0,1-.144-.144V9.686a.145.145,0,0,1,.144-.144H23a.145.145,0,0,1,.144.144Z" fill="#72748b"/>
+    <ellipse id="Ellipse_305" data-name="Ellipse 305" cx="0.977" cy="0.977" rx="0.977" ry="0.977" transform="translate(18.759 13.134)" fill="#72748b"/>
+    <ellipse id="Ellipse_306" data-name="Ellipse 306" cx="0.977" cy="0.977" rx="0.977" ry="0.977" transform="translate(15.034 13.134)" fill="#72748b"/>
+    <ellipse id="Ellipse_307" data-name="Ellipse 307" cx="0.977" cy="0.977" rx="0.977" ry="0.977" transform="translate(11.008 14.64) rotate(-67.5)" fill="#72748b"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_mode_dayNight" transform="translate(1298 -12171)">
+    <path id="Path_6667" data-name="Path 6667" d="M18,38a1,1,0,0,1-1-1V35a1,1,0,0,1,2,0v2A1,1,0,0,1,18,38Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6668" data-name="Path 6668" d="M11.636,40.636a1,1,0,0,1-.707-.293L9.515,38.929a1,1,0,1,1,1.414-1.414l1.414,1.414a1,1,0,0,1-.707,1.707Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6669" data-name="Path 6669" d="M10.222,54.778a1,1,0,0,1-.707-1.707l1.414-1.414a1,1,0,1,1,1.414,1.414l-1.414,1.414A1,1,0,0,1,10.222,54.778Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6670" data-name="Path 6670" d="M18,58a1,1,0,0,1-1-1V55a1,1,0,0,1,2,0v2A1,1,0,0,1,18,58Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6671" data-name="Path 6671" d="M9,47H7a1,1,0,0,1,0-2H9a1,1,0,0,1,0,2Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6673" data-name="Path 6673" d="M18,39a7,7,0,1,0,7,7,7,7,0,0,0-7-7Zm0,12a5,5,0,1,1,5-5,5,5,0,0,1-5,5Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6674" data-name="Path 6674" d="M25.071,51.657a1,1,0,1,0-1.414,1.414l1.414,1.414a1,1,0,1,0,1.414-1.414Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6675" data-name="Path 6675" d="M29,45H27a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z" transform="translate(-1304 12137)" fill="#fff"/>
+    <path id="Path_6676" data-name="Path 6676" d="M24.364,40.636a1,1,0,0,0,.707-.293l1.414-1.414a1,1,0,1,0-1.414-1.414l-1.414,1.414a1,1,0,0,0,.707,1.707Z" transform="translate(-1304 12137)" fill="#fff"/>
+  </g>
+</svg>

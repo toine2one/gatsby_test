@@ -1,0 +1,313 @@
+@import "../../styles/colors";
+
+.container {
+  display: flex;
+  background-color: #0c0b2d;
+  position: relative;
+  z-index: 1;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .roadmap {
+      width: 100%;
+      position: relative;
+
+      .col {
+        padding: 0 0;
+      }
+
+      .milestone {
+        position: relative;
+        padding-left: 1rem;
+        width: 100%;
+        padding-bottom: 95%;
+
+        h3 {
+          font-weight: 500;
+          text-align: left;
+          color: white;
+          font-size: 1.8rem;
+          margin-left: 0.8rem;
+        }
+
+        h4 {
+          color: white;
+          padding: 0.25rem 0.25rem 0.25rem 1rem;
+          border-radius: 8px;
+          font-family: "Barlow Semi condensed";
+          font-size: 1.1rem;
+          margin-top: 0.5rem;
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+
+          &.q1a {
+            background-color: #41a7f7;
+          }
+
+          &.q1 {
+            background-color: #6f44a7;
+          }
+
+          &.q2 {
+            background-color: #a7447f;
+          }
+
+          &.q3 {
+            background-color: #ca6566;
+          }
+        }
+
+        .image {
+          position: absolute;
+          top: -1.6rem;
+          left: -2.5rem;
+        }
+
+        ul {
+          margin-top: 2rem;
+          list-style-type: none;
+
+          .li-icon {
+            display: block;
+            position: absolute;
+            top: 0.23rem;
+            left: -0.7rem;
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            margin-left: -1rem;
+          }
+
+          &.q1a {
+            li {
+              position: relative;
+
+              &::before {
+                @extend .li-icon;
+                border: 3px solid #41a7f7;
+              }
+            }
+          }
+
+          &.q1 {
+            li {
+              position: relative;
+
+              &::before {
+                @extend .li-icon;
+                border: 3px solid #6f44a7;
+              }
+            }
+          }
+
+          &.q2 {
+            li {
+              position: relative;
+
+              &::before {
+                @extend .li-icon;
+                border: 3px solid #a7447f;
+              }
+            }
+          }
+
+          &.q3 {
+            li {
+              position: relative;
+
+              &::before {
+                @extend .li-icon;
+                border: 3px solid #ca6566;
+              }
+            }
+          }
+
+          li {
+            color: #aa97e9;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+
+      .disclaimer {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        padding-left: 5rem;
+        background-color: rgba(31, 32, 50, 0.5);
+        border-radius: 8px;
+        width: 80%;
+
+        p {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          margin: 0;
+        }
+
+        img {
+          position: absolute;
+          left: 1rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+
+    .row {
+      height: 100%;
+      width: 100%;
+
+      .col {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .roadmap-vert {
+      width: 100%;
+
+      .milestone {
+        display: flex;
+        margin-bottom: 0;
+
+        .milestone-img {
+          width: 20%;
+          margin-top: 0.5rem;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .milestone-info {
+          width: 80%;
+
+          h3 {
+            font-weight: 600;
+            text-align: left;
+            color: white;
+            font-size: 1.4rem;
+            margin-left: 0.5rem;
+          }
+
+          h4 {
+            color: white;
+            padding: 0.25rem 0.25rem 0.25rem 1rem;
+            border-radius: 4px;
+            font-family: "Barlow Semi condensed";
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+
+            &.q1a {
+              background-color: #41a7f7;
+            }
+
+            &.q1 {
+              background-color: #6f44a7;
+            }
+
+            &.q2 {
+              background-color: #a7447f;
+            }
+
+            &.q3 {
+              background-color: #ca6566;
+            }
+          }
+
+          ul {
+            list-style-type: none;
+            margin: 0;
+
+            .li-icon {
+              display: block;
+              position: absolute;
+              top: 0.25rem;
+              left: -0.7rem;
+              content: "";
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              margin-left: -1rem;
+            }
+
+            &.q1a {
+              li {
+                position: relative;
+                margin-bottom: 1rem;
+
+                &::before {
+                  @extend .li-icon;
+                  border: 3px solid #41a7f7;
+                }
+              }
+            }
+
+            &.q1 {
+              li {
+                position: relative;
+
+                &::before {
+                  @extend .li-icon;
+                  border: 3px solid #6f44a7;
+                }
+              }
+            }
+
+            &.q2 {
+              li {
+                position: relative;
+
+                &::before {
+                  @extend .li-icon;
+                  border: 3px solid #a7447f;
+                }
+              }
+            }
+
+            &.q3 {
+              li {
+                position: relative;
+
+                &::before {
+                  @extend .li-icon;
+                  border: 3px solid #ca6566;
+                }
+              }
+            }
+
+            li {
+              color: #aa97e9;
+              margin-bottom: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

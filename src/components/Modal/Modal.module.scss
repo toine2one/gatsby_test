@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $secundaryDark;
+    opacity: 0.3;
+    z-index: 11;
+  }
+
+  .modal {
+    display: inline-block;
+    background-color: $primary;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 12;
+    padding: 3rem 1rem 1rem 1rem;
+    min-width: 20rem;
+    border-radius: 8px;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0.9rem;
+      left: 1rem;
+      height: 0.5rem;
+      width: calc(100% - 4rem);
+      background-image: url("/images/icons/icon_screenDetail_secondary.png");
+    }
+
+    .close-button {
+      position: absolute;
+      right: 0.8rem;
+      top: 0.5rem;
+      width: 1.2rem;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+}

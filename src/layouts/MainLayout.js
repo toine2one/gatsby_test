@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import NavBar from "../components/Navbar/NavBar"
 import "../styles/global.scss"
 
 export default function MainLayout({ children }) {
@@ -68,6 +69,7 @@ export default function MainLayout({ children }) {
 
   return (
     <div className="main-layout">
+      <NavBar></NavBar>
       <div>
         <div className="main-layout__content">{children}</div>
       </div>

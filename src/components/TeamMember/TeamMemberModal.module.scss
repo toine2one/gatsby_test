@@ -1,0 +1,62 @@
+@import "../../styles/colors";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $secundaryDark;
+    opacity: 0.3;
+    z-index: 11;
+    pointer-events: none;
+  }
+
+  .modal {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: $secundary;
+    border: 2px solid $blue;
+    border-radius: 8px;
+    width: 28rem;
+    padding: 4rem 1rem 1rem 1rem;
+    position: relative;
+    z-index: 13;
+
+    p {
+      &.member-name {
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      &.member-role {
+        color: $blue;
+        margin: 0;
+        text-align: center;
+      }
+
+      &.member-bio {
+        color: white;
+        margin-top: 1rem;
+      }
+    }
+
+    .avatar-img {
+      position: absolute;
+      top: -7.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

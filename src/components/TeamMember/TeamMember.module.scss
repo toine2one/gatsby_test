@@ -1,180 +1,32 @@
 @import "../../styles/colors";
 
-.team-member-container {
-  display: inline-block;
+.container {
+  background-color: $secundary;
+  border: 2px solid $blue;
+  border-radius: 8px;
+  width: 100%;
+  padding: 2.5rem 0 1rem 0;
   position: relative;
-  padding-top: 4rem;
-  height: initial !important;
+  cursor: pointer;
 
-  &.team-member-container--mobile {
-    padding-top: 0;
-
-    .team-member {
-      position: relative;
-      width: 6rem;
-
-      .team-member-avatar {
-        position: absolute;
-        left: 0;
-        top: 4rem;
-
-        img {
-          position: absolute;
-          top: -5rem;
-          left: 50%;
-          width: 6rem;
-          transform: translateX(-50%);
-        }
-
-        &.team-member-avatar--right {
-          left: unset;
-          right: 0;
-        }
-      }
-
-      .team-member-info {
-        margin-top: 0;
-
-        img {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  .team-member {
-    background-color: $secundary;
-    border-radius: 8px;
-    padding: 1rem 0;
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid $blue;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
-    margin: 1.5rem 0;
-
-    &.team-member--opened {
-      position: relative;
-      width: 25rem;
-      padding: 0 1rem 1rem 1rem;
-      cursor: default;
-
-      .team-member-info {
-        .team-member-bio {
-          display: block;
-        }
-      }
-
-      .team-member-avatar {
-        img {
-          top: -4.8rem;
-        }
-      }
-
-      .team-member-close-btn {
-        position: absolute;
-        top: -0.5rem;
-        right: 0rem;
-        cursor: pointer;
-        padding: 1rem;
-
-        img {
-          width: 0.8rem;
-        }
-      }
-    }
-
-    .team-member-avatar {
-      position: relative;
-
-      img {
-        position: absolute;
-        top: -5rem;
-        left: 50%;
-        width: 6rem;
-        transform: translateX(-50%);
-      }
-    }
-
-    .team-member-info {
+  p {
+    &.member-name {
+      color: white;
+      margin: 0;
       text-align: center;
-      margin-top: 2rem;
+    }
 
-      .team-member-info-name {
-        p {
-          font-size: 1.2rem;
-          line-height: 1rem;
-          margin: 0.25rem;
-        }
-      }
-
-      .team-member-info-role {
-        p {
-          color: $blue;
-          line-height: 1rem;
-          margin: 0;
-        }
-      }
-
-      .team-member-social {
-        ul {
-          display: flex;
-
-          li {
-            img {
-              width: 2rem;
-            }
-          }
-        }
-      }
-
-      .team-member-bio {
-        display: none;
-        transition: 0.2s ease-in-out;
-
-        p {
-          font-size: 1rem;
-          text-align: left;
-          line-height: 1.2rem;
-          margin: 0.5rem;
-          color: white;
-          font-family: "Barlow Semi Condensed";
-          font-weight: 100;
-        }
-      }
-
-      img {
-        cursor: pointer;
-      }
+    &.member-role {
+      color: $blue;
+      margin: 0;
+      text-align: center;
     }
   }
-}
 
-.team-member-modal-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 900;
-
-  .team-member-modal-overlay {
+  .avatar-img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    opacity: 0.4;
-    z-index: 950;
-  }
-
-  .team-member-modal {
-    position: absolute;
-    top: 20%;
+    top: -5.5rem;
     left: 50%;
-    transform: translate(-50%);
-    z-index: 999;
-    padding: 0 1rem;
+    transform: translateX(-50%);
   }
 }
