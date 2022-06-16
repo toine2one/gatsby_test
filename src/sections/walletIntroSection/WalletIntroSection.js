@@ -1,11 +1,32 @@
 import React from "react"
 import PageSection from "../../components/PageSection/PageSection"
 import PageSectionColumns from "../../components/PageSection/PageSectionColumns"
+import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "./WalletIntroSection.module.scss"
 
+export const defaultImageQuery = graphql`
+  fragment defaultImageQuery on File {
+    childImageSharp {
+      gatsbyImageData(
+        blurredOptions: { width: 10 }
+        placeholder: NONE
+        quality: 100
+      )
+    }
+  }
+`
+
 export default function WalletIntroSection({ image }) {
+  const data = useStaticQuery(graphql`
+    query {
+      bg: file(relativePath: { eq: "bg/figures/bg_wavesBottom_figures.png" }) {
+        ...defaultImageQuery
+      }
+    }
+  `)
+
   return (
-    <PageSection classes={styles.walletIntroSection}>
+    <PageSection classes={styles.walletIntroSection} image={data.bg}>
       <PageSectionColumns
         titleTop="Blockchain Made Easy for Everyone"
         title="Cryptopia Wallet"

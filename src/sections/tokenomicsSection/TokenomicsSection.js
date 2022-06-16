@@ -24,11 +24,15 @@ export default function TokenomicsSection({ image }) {
       ) {
         ...defaultImageQuery
       }
+
+      bg: file(relativePath: { eq: "tokenomics/bg/bg_dots_middle.png" }) {
+        ...defaultImageQuery
+      }
     }
   `)
 
   return (
-    <PageSection classes={styles.container}>
+    <PageSection classes={styles.container} image={data.bg}>
       <div className="container">
         <div className="row wrap-reverse">
           <div
