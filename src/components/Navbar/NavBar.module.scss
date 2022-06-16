@@ -8,6 +8,10 @@
   background-color: $secundaryDark;
   z-index: 5;
 
+  @media (max-width: 480px) {
+    padding-right: 1rem;
+  }
+
   ul {
     @include horizontal-list;
 

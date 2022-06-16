@@ -37,7 +37,7 @@ export default function NavBar() {
             ></GatsbyImage>
           </div>
           <div className="col col-lg-8 h-100 d-flex justify-content-center align-items-center">
-            <ul>
+            <ul className="d-none d-md-block">
               <li>Home</li>
               <li>Story</li>
               <li>Game</li>

@@ -31,6 +31,15 @@
 
     .team-member {
       margin: 4rem 0;
+
+      @media (max-width: 480px) {
+        margin: 2rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 5rem 0 7rem;
+      margin-top: 8rem;
     }
   }
 }

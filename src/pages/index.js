@@ -11,12 +11,56 @@ import TeamSection from "../sections/teamSection/TeamSection"
 import Modal from "../components/Modal/Modal"
 import useModal from "../hooks/useModal"
 import RoadmapSection from "../sections/roadmapSection/RoadmapSection"
+import SEO from "../components/SEO"
+import TokenomicsSection from "../sections/tokenomicsSection/TokenomicsSection"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
 
+  const organizationSchemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      name: "Cryptopia Inc.",
+      alternateName: "Cryptopia Metaverse",
+      url: "https://cryptopia.com",
+      logo: "https://cryptopia.com/icon-512.png",
+      sameAs: [
+        "https://www.facebook.com/cryptopiacom",
+        "https://twitter.com/Cryptopia_OFCL",
+        "https://www.instagram.com/cryptopia_official",
+        "https://www.youtube.com/c/CryptopiaOfficial",
+        "https://www.linkedin.com/company/cryptopiametaverse",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: "Welcome to Cryptopia",
+      description:
+        "Ships are about to get real! Cryptopia's foundation has been laid and it's time to join a faction. Who will you be in the new world? What ethos do you follow? Join us now on Early Access and get a head start building the metaverse.",
+      thumbnailUrl: "https://img.youtube.com/vi/-g3gXKg_13w/0.jpg",
+      uploadDate: "2022-04-05",
+      duration: "PT1M25S",
+      publisher: {
+        "@type": "Organization",
+        name: "Cryptopia Inc.",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://cryptopia.com/icon-60.png",
+          width: 60,
+          height: 60,
+        },
+      },
+      contentUrl:
+        "https://drive.google.com/file/d/1NfrlQ_tzQFp4kyapCm244ZRV3TuTdFJd/view",
+      embedUrl: "https://www.youtube.com/embed/-g3gXKg_13w",
+    },
+  ]
+
   return (
     <MainLayout>
+      <SEO schemaMarkup={organizationSchemaMarkup} />
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg1.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -112,6 +156,7 @@ export default function Home({ data }) {
       <WalletIntroSection image={data.walletFrame}></WalletIntroSection>
       <TeamSection imageData={data}></TeamSection>
       <RoadmapSection></RoadmapSection>
+      <TokenomicsSection />
     </MainLayout>
   )
 }

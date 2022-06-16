@@ -6,11 +6,11 @@ import * as styles from "./TeamSection.module.scss"
 export default function TeamSection({ imageData }) {
   return (
     <PageSection classes={styles.container}>
-      <h1>Meet The Team</h1>
-      <h2>Together everyone achieves more</h2>
+      {/* <h1>Meet The Team</h1>
+      <h2>Together everyone achieves more</h2> */}
       <div
         id="carouselExampleFade"
-        className="carousel slide carousel-fade vh-100"
+        className="carousel slide carousel-fade vh-100 d-none d-lg-block"
         data-bs-ride="carousel"
         data-bs-interval="false"
       >
@@ -198,6 +198,120 @@ export default function TeamSection({ imageData }) {
           className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div
+        id="carouselTeamMobile"
+        className="carousel slide carousel-fade vh-100 vw-100 d-block d-lg-none"
+        data-bs-ride="carousel"
+        data-bs-interval="false"
+      >
+        <div className="carousel-inner h-100 vw-100">
+          <div className="carousel-item active d-flex align-items-center justify-content-center h-100 w-100"></div>
+          <div
+            className={`${styles.teamContainer} container d-flex justify-content-center`}
+          >
+            <div className="row d-flex justify-content-center">
+              <div className={`${styles.teamMember} col-lg-3`}>
+                <TeamMember
+                  name="Frank Bonnet"
+                  role="Founder & Lead development"
+                  bio="Founder and Lead Developer of Cryptopia. Frank Bonnet comes with 12 years of experience designing, as well as building countless enterprise .NET applications. With a deep understanding of blockchain and smart-contract development, he is essential to our team. Frank has a business view with a developer’s expertise."
+                  image={imageData.teamAvatarFrank}
+                />
+              </div>
+              <div className={`${styles.teamMember} col-lg-3`}>
+                <TeamMember
+                  name="Hansco Leek"
+                  role="Co-founder"
+                  bio="Hansco Leek is a co-founder of Cryptopia. He has been involved in cryptocurrency since 2016 as an investor and entrepreneur. Together with Frank, they founded Cryptopia - the Groundbreaking Blockchain-Driven Metaverse game. Hans has been helping with operations and providing necessary resources to kickstart Cryptopia in the past 2 year."
+                  image={imageData.teamAvatarHansco}
+                />
+              </div>
+              <div className={`${styles.teamMember} col-lg-3`}>
+                <TeamMember
+                  name="Sangho Grolleman"
+                  role="Chief Executive Officer"
+                  bio="Sangho Grolleman is the CEO of Cryptopia. He has been active in cryptocurrency since 2018 and worked with several cryptocurrency startups both as a team member (CEO and COO) and as an external advisor. He has extensive experience as an entrepreneur, digital marketer, and full stack developer, as well as a teacher and trainer. He also brings over 30 years of gaming experience as an avid gamer. He believes that we are uniquely positioned to leverage blockchain technology in the Metaverse game."
+                  image={imageData.teamAvatarSangho}
+                />
+              </div>
+              <div className={`${styles.teamMember} col-lg-3`}>
+                <TeamMember
+                  name="Pichapen Sörum"
+                  role="Chief Marketing Officer"
+                  bio="Pichapen has 8 years of experience working with start-ups, and emerging enterprises. Her expertise in structuring the communication matrix that drives the business strategy, generating insights & experiential details leading to the marketing plan will assist Cryptopia's exponential growth."
+                  image={imageData.teamAvatarPichapen}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100">
+            <div
+              className={`${styles.teamContainer} container d-flex justify-content-center`}
+            >
+              <div className="row">
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Ami Mandel"
+                    role="Chief Operating Officer"
+                    bio="Ami is a marketer and entrepreneur that has worked in the blockchain space since 2017. With his marketing and branding company, he has helped multiple blockchain startups to successfully market and grow their businesses. As COO of Cryptopia, Ami is leading the development of Cryptopia’s core foundations and driving the day-to-day operations of the Cryptopia team."
+                    image={imageData.teamAvatarAmi}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Toine Koene"
+                    role="Web-Developer"
+                    bio="Toine is a creative mind and a web developer who coordinates designs, animations, illustrations, and web content. As one of the early team members, he has helped interpret ideas and visions into online presences that successfully capture the core essence of Cryptopia."
+                    image={imageData.teamAvatarToine}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Jon Beaulieu"
+                    role="Chief Information Officer"
+                    bio="Jon Beaulieu is Cryptopia's CIO. Jon has helped numerous startups and SMEs by providing them useful insights on user experience development, project management and data-driven analysis. Jon became aware of Bitcoin while stationed in Japan and when he left the military in 2009 he impulsively started mining. Jon's experience and pro skills in business intelligence (BI), web analytics, marketing automation, and data management will help Cryptopia stay ahead of the market with data-driven decisions. He's a domain expert in generating value from big data & target audiences, internet behavior & user website interactions and provides recommendations based on statistical analysis."
+                    image={imageData.teamAvatarJon}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Lauderic Labapis"
+                    role="Community Manager"
+                    bio="Laudie is a hardcore gamer with 15 years of experience in Customer Service and Social Media Management. He is skilled in leading others to deliver results in the metaverse and is an expert in leveraging digital platforms to promote community growth."
+                    image={imageData.teamAvatarLauderic}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100"></div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselTeamMobile"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselTeamMobile"
           data-bs-slide="next"
         >
           <span

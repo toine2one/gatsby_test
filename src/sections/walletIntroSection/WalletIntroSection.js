@@ -9,7 +9,7 @@ export default function WalletIntroSection({ image }) {
       <div className="container">
         <div className="row">
           <div
-            className={`${styles.info} col col-lg-6 d-flex flex-column justify-content-center`}
+            className={`${styles.info} col col-lg-6 col-12 col-sm-12 d-flex flex-column justify-content-center`}
           >
             <h3>Blockchain Made Easy for Everyone</h3>
             <h1>Cryptopia Wallet</h1>
@@ -20,8 +20,11 @@ export default function WalletIntroSection({ image }) {
               experience is complicated, similar to the early internet. Our
               integrated wallet is the solution for large adoption
             </p>
+            <button className={`${styles.button} custom-btn blue`}>
+              Learn More
+            </button>
           </div>
-          <div className="col col-lg-6">
+          <div className="col col-lg-6 col-12 col-sm-12">
             <GatsbyImage loading="lazy" image={getImage(image)}></GatsbyImage>
           </div>
         </div>

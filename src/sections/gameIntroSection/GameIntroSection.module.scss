@@ -20,5 +20,14 @@
       margin-top: 1rem;
       color: white;
     }
+
+    .button {
+      width: 12rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      padding-bottom: 2rem;
+    }
   }
 }

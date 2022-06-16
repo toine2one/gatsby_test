@@ -9,7 +9,7 @@ export default function GameIntroSection({ image }) {
       <div className="container">
         <div className="row">
           <div
-            className={`${styles.info} col col-lg-6 d-flex flex-column justify-content-center`}
+            className={`${styles.info} col col-lg-6 col-12 col-sm-12 d-flex flex-column justify-content-center`}
           >
             <h3>Groundbreaking</h3>
             <h1>Blockchain-Driven Metaverse Game</h1>
@@ -21,8 +21,11 @@ export default function GameIntroSection({ image }) {
               benefits of this technology while having fun creating their own
               ideal society.
             </p>
+            <button className={`${styles.button} custom-btn blue`}>
+              Learn More
+            </button>
           </div>
-          <div className="col col-lg-6">
+          <div className="col col-lg-6 col-12 col-sm-12">
             <GatsbyImage loading="lazy" image={getImage(image)}></GatsbyImage>
           </div>
         </div>

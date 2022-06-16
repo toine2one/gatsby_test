@@ -8,16 +8,14 @@ export default function TeamMember({ name, role, bio, image }) {
   const { isShowing, toggle } = useTeamMemberModal()
 
   return (
-    <div onClick={toggle}>
-      <div className={styles.container}>
-        <GatsbyImage
-          loading="lazy"
-          className={styles.avatarImg}
-          image={getImage(image)}
-        ></GatsbyImage>
-        <p className={styles.memberName}>{name}</p>
-        <p className={styles.memberRole}>{role}</p>
-      </div>
+    <div className={styles.container} onClick={toggle}>
+      <GatsbyImage
+        loading="lazy"
+        className={styles.avatarImg}
+        image={getImage(image)}
+      ></GatsbyImage>
+      <p className={styles.memberName}>{name}</p>
+      <p className={styles.memberRole}>{role}</p>
       <TeamMemberModal
         name={name}
         role={role}

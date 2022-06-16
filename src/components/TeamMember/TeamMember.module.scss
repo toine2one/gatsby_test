@@ -9,6 +9,10 @@
   position: relative;
   cursor: pointer;
 
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+  }
+
   p {
     &.member-name {
       color: white;
@@ -28,5 +32,13 @@
     top: -5.5rem;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (max-width: 480px) {
+      top: -1.5rem;
+      left: -5rem;
+      transform: translateY(-50%);
+      transform: translateX(0);
+      width: 8rem;
+    }
   }
 }
