@@ -35,7 +35,9 @@ export default function TokenomicsSection({ image }) {
             className={`${styles.info} col col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-center`}
           >
             <h1>Tokenomics</h1>
-            <h3>Cryptopia token (CRT) is the in-game token of Cryptopia</h3>
+            <h3 className="d-none d-md-block">
+              Cryptopia token (CRT) is the in-game token of Cryptopia
+            </h3>
             <p>
               Cryptopia has a fixed amount of 10 billion CRT. This means that
               our token is deflationary by nature. The more players there are,

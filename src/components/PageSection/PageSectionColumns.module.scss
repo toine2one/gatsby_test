@@ -1,0 +1,35 @@
+@import "../../styles/colors";
+
+.container {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .info {
+    h3 {
+      color: white;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      margin-top: 1rem;
+      color: white;
+    }
+
+    .button {
+      width: 12rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .image {
+    @media (max-width: 480px) {
+      padding-bottom: 1rem;
+    }
+  }
+}

@@ -92,7 +92,6 @@ export default function Home({ data }) {
           </Modal>
         </div>
       </MainConceptArtPageSection>
-
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
           data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
@@ -100,23 +99,14 @@ export default function Home({ data }) {
         backgroundImgPath={
           data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
         }
-      ></MainConceptArtPageSection>
-
-      <MainConceptArtPageSection
-        backgroundPlaceholderImgPath={
-          data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
-        }
-        backgroundImgPath={
-          data.bg3.childImageSharp.gatsbyImageData.images.fallback.src
-        }
       >
         <div
           className={`${styles.whitepaperSection} h-100 d-flex align-items-center`}
         >
           <div className="container">
-            <div className="row">
+            <div className="row flex-wrap-reverse">
               <div
-                className={`${styles.info} col-lg-6 d-flex flex-column justify-content-center`}
+                className={`${styles.info} col-lg-6 col-12 col-sm-12 d-flex flex-column justify-content-center`}
               >
                 <h3>A World Based On</h3>
                 <h1>The Lost Revolutionary White Paper</h1>
@@ -131,7 +121,9 @@ export default function Home({ data }) {
                   society would serve as an example for all others to follow.
                 </p>
               </div>
-              <div className={`col-lg-6 d-flex justify-content-center`}>
+              <div
+                className={`${styles.whitepaperImage} col col-lg-6 col-12 col-sm-12 d-flex justify-content-center`}
+              >
                 <GatsbyImage
                   loading="lazy"
                   image={getImage(data.legacyWhitepaperGraphic)}
@@ -142,7 +134,14 @@ export default function Home({ data }) {
           </div>
         </div>
       </MainConceptArtPageSection>
-
+      <MainConceptArtPageSection
+        backgroundPlaceholderImgPath={
+          data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
+        }
+        backgroundImgPath={
+          data.bg3.childImageSharp.gatsbyImageData.images.fallback.src
+        }
+      ></MainConceptArtPageSection>
       <FactionSection
         images={[
           data.factionContainerEco,

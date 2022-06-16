@@ -27,7 +27,7 @@ export default function NavBar() {
   `)
 
   return (
-    <div className={styles.container}>
+    <nav className={`${styles.container}`}>
       <div className="container h-100">
         <div className="row h-100">
           <div className="col col-lg-2 h-100 d-flex align-items-center">
@@ -37,7 +37,7 @@ export default function NavBar() {
             ></GatsbyImage>
           </div>
           <div className="col col-lg-8 h-100 d-flex justify-content-center align-items-center">
-            <ul className="d-none d-md-block">
+            <ul className="d-none d-lg-block">
               <li>Home</li>
               <li>Story</li>
               <li>Game</li>
@@ -55,6 +55,6 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }

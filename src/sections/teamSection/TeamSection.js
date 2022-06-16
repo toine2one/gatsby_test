@@ -6,8 +6,8 @@ import * as styles from "./TeamSection.module.scss"
 export default function TeamSection({ imageData }) {
   return (
     <PageSection classes={styles.container}>
-      {/* <h1>Meet The Team</h1>
-      <h2>Together everyone achieves more</h2> */}
+      <h1>Meet The Team</h1>
+      <h2>Together everyone achieves more</h2>
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade vh-100 d-none d-lg-block"
@@ -295,7 +295,106 @@ export default function TeamSection({ imageData }) {
             </div>
           </div>
 
-          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100"></div>
+          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100">
+            <div className={`${styles.teamContainer} container`}>
+              <div className="row">
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Divesh Tanwani"
+                    role="Social Media Manager"
+                    bio="Divesh has a deep interest in the blockchain space and seeks to utilize the technology to transform this world for the better. As a Social Media Manager, Divesh helps strengthen Cryptopia's engaging community as well as outreach for P2E enthusiasts and mainstream potential investors."
+                    image={imageData.teamAvatarDivesh}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Matthew Sloan"
+                    role="Lead Game Designer"
+                    bio="Lead Game Designer for Cryptopia. Matthew Sloan has over 9 years of experience building games using Unity3D. Having published games on multiple platforms and created the world's first GA-NFT or Game As Non-Fungible Token Matthew brings the perfect balance of technical skill and creative design. Matthew has a high passion for developing and designing and is essential to the team in bringing the AAA HQ experience into the Cryptopian Metaverse."
+                    image={imageData.teamAvatarMatt}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Mateo Tedin"
+                    role="Illustrator & Concept Artist"
+                    bio="Mateo is an illustrator and a concept artist based in Buenos Aires, Argentina. He has worked in editorial illustrations for history books, fantasy art illustrations, characters, props, environment designs, and commercial illustrations for several publications and brands. He is currently working as Lead Illustrator and Concept Artist for Cryptopia."
+                    image={imageData.teamAvatarMateo}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Oğuz Boduroğlu"
+                    role="Web Designer & 3D Modeller"
+                    bio="Oguz is a graphic designer and game artist with more than 10 years of experience. In the past decade, he has gained a vast amount of experience, doing extensive work in various companies all over the world. He is the one behind Cryptopia's design conceptualization and intriguing visuals."
+                    image={imageData.teamAvatarOguz}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100">
+            <div className={`${styles.teamContainer} container`}>
+              <div className="row">
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Erik Lyppens"
+                    role="Project manager"
+                    bio="Erik has a business background (Project Management, Commercial and Start-Up Operations) and extensive experience in technology and social innovation. He joined Cryptopia since the early days and has brought his broad experience in blockchain start-ups, product launches, commercial drive & management to the team."
+                    image={imageData.teamAvatarErik}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Maarten J.R. Jansen"
+                    role="Legal assistance"
+                    bio="Maarten J.R. Jansen is an experienced lawyer who provides legal assistance to startups and scale ups in the blockchain community. He advises several startups and large companies in the blockchain space. His experience also extends to his work with companies that develop technology on a blockchain."
+                    image={imageData.teamAvatarMaarten}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Mark Aragona"
+                    role="Creative Writer"
+                    bio="Published writer with 12 years of experience writing fiction, web copy, blogs, and articles. As a fantasy/video game writer, I provide compelling and engaging stories for video games or books, as well as e - book game guides and FAQs."
+                    image={imageData.teamAvatarMarkA}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Zimri Leijen"
+                    role="Advisor"
+                    bio="Zimri Leijen has been involved in the crypto space since 2013, and with web3 games since the days of cryptokitties. Through his several years of working experience at various crypto startups he has acquired many high profile connections in the industry, and the knowledge gained during this period is wide and diverse."
+                    image={imageData.teamAvatarZimri}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-item d-flex align-items-center justify-content-center h-100 w-100">
+            <div className={`${styles.teamContainer} container`}>
+              <div className="row">
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="MR. Nguyen Ngoc Dinh"
+                    role="Representative Vietnam"
+                    bio="A specialist in digitalization, blockchain, and AI technology applied in economic development."
+                    image={imageData.teamAvatarDavid}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Stefan Offringa"
+                    role="Financial Advisor"
+                    bio="Stefan is an experienced corporate finance professional, entrepreneur and NFT investor. He is very active in mergers & acquisitions, fundraising for growth companies and private equity. Stefan has a financial as well as a technical background."
+                    image={imageData.teamAvatarStefan}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <button
           className="carousel-control-prev"
