@@ -18,12 +18,24 @@
       color: white;
       margin: 0;
       text-align: center;
+
+      @media (max-width: 480px) {
+        text-align: left;
+      }
     }
 
     &.member-role {
       color: $blue;
       margin: 0;
       text-align: center;
+
+      @media (max-width: 480px) {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding-left: 4rem;
     }
   }
 
@@ -35,7 +47,7 @@
 
     @media (max-width: 480px) {
       top: -1.5rem;
-      left: -5rem;
+      left: -4rem;
       transform: translateY(-50%);
       transform: translateX(0);
       width: 8rem;

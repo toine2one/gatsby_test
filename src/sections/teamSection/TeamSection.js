@@ -214,42 +214,43 @@ export default function TeamSection({ imageData }) {
         data-bs-interval="false"
       >
         <div className="carousel-inner h-100 vw-100">
-          <div className="carousel-item active d-flex align-items-center justify-content-center h-100 w-100"></div>
-          <div
-            className={`${styles.teamContainer} container d-flex justify-content-center`}
-          >
-            <div className="row d-flex justify-content-center">
-              <div className={`${styles.teamMember} col-lg-3`}>
-                <TeamMember
-                  name="Frank Bonnet"
-                  role="Founder & Lead development"
-                  bio="Founder and Lead Developer of Cryptopia. Frank Bonnet comes with 12 years of experience designing, as well as building countless enterprise .NET applications. With a deep understanding of blockchain and smart-contract development, he is essential to our team. Frank has a business view with a developer’s expertise."
-                  image={imageData.teamAvatarFrank}
-                />
-              </div>
-              <div className={`${styles.teamMember} col-lg-3`}>
-                <TeamMember
-                  name="Hansco Leek"
-                  role="Co-founder"
-                  bio="Hansco Leek is a co-founder of Cryptopia. He has been involved in cryptocurrency since 2016 as an investor and entrepreneur. Together with Frank, they founded Cryptopia - the Groundbreaking Blockchain-Driven Metaverse game. Hans has been helping with operations and providing necessary resources to kickstart Cryptopia in the past 2 year."
-                  image={imageData.teamAvatarHansco}
-                />
-              </div>
-              <div className={`${styles.teamMember} col-lg-3`}>
-                <TeamMember
-                  name="Sangho Grolleman"
-                  role="Chief Executive Officer"
-                  bio="Sangho Grolleman is the CEO of Cryptopia. He has been active in cryptocurrency since 2018 and worked with several cryptocurrency startups both as a team member (CEO and COO) and as an external advisor. He has extensive experience as an entrepreneur, digital marketer, and full stack developer, as well as a teacher and trainer. He also brings over 30 years of gaming experience as an avid gamer. He believes that we are uniquely positioned to leverage blockchain technology in the Metaverse game."
-                  image={imageData.teamAvatarSangho}
-                />
-              </div>
-              <div className={`${styles.teamMember} col-lg-3`}>
-                <TeamMember
-                  name="Pichapen Sörum"
-                  role="Chief Marketing Officer"
-                  bio="Pichapen has 8 years of experience working with start-ups, and emerging enterprises. Her expertise in structuring the communication matrix that drives the business strategy, generating insights & experiential details leading to the marketing plan will assist Cryptopia's exponential growth."
-                  image={imageData.teamAvatarPichapen}
-                />
+          <div className="carousel-item active d-flex align-items-center justify-content-center h-100 w-100">
+            <div
+              className={`${styles.teamContainer} container d-flex justify-content-center`}
+            >
+              <div className="row d-flex justify-content-center">
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Frank Bonnet"
+                    role="Founder & Lead development"
+                    bio="Founder and Lead Developer of Cryptopia. Frank Bonnet comes with 12 years of experience designing, as well as building countless enterprise .NET applications. With a deep understanding of blockchain and smart-contract development, he is essential to our team. Frank has a business view with a developer’s expertise."
+                    image={imageData.teamAvatarFrank}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Hansco Leek"
+                    role="Co-founder"
+                    bio="Hansco Leek is a co-founder of Cryptopia. He has been involved in cryptocurrency since 2016 as an investor and entrepreneur. Together with Frank, they founded Cryptopia - the Groundbreaking Blockchain-Driven Metaverse game. Hans has been helping with operations and providing necessary resources to kickstart Cryptopia in the past 2 year."
+                    image={imageData.teamAvatarHansco}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Sangho Grolleman"
+                    role="Chief Executive Officer"
+                    bio="Sangho Grolleman is the CEO of Cryptopia. He has been active in cryptocurrency since 2018 and worked with several cryptocurrency startups both as a team member (CEO and COO) and as an external advisor. He has extensive experience as an entrepreneur, digital marketer, and full stack developer, as well as a teacher and trainer. He also brings over 30 years of gaming experience as an avid gamer. He believes that we are uniquely positioned to leverage blockchain technology in the Metaverse game."
+                    image={imageData.teamAvatarSangho}
+                  />
+                </div>
+                <div className={`${styles.teamMember} col-lg-3`}>
+                  <TeamMember
+                    name="Pichapen Sörum"
+                    role="Chief Marketing Officer"
+                    bio="Pichapen has 8 years of experience working with start-ups, and emerging enterprises. Her expertise in structuring the communication matrix that drives the business strategy, generating insights & experiential details leading to the marketing plan will assist Cryptopia's exponential growth."
+                    image={imageData.teamAvatarPichapen}
+                  />
+                </div>
               </div>
             </div>
           </div>
