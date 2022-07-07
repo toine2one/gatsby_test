@@ -4,6 +4,7 @@ import * as styles from "./MainConceptArtPageSection.module.scss"
 export default function MainConceptArtPageSection({
   backgroundImgPath,
   backgroundPlaceholderImgPath,
+  classes,
   children,
 }) {
   const backgroundStyle = {
@@ -15,7 +16,7 @@ export default function MainConceptArtPageSection({
 
   return (
     <section
-      className={`${styles.container} lazy-style`}
+      className={`${styles.container} ${classes} lazy-style`}
       data-bg-img={backgroundImgPath}
       style={backgroundStyle}
     >

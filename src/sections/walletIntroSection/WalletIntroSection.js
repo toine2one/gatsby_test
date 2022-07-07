@@ -29,6 +29,7 @@ export default function WalletIntroSection({ image }) {
     <PageSection classes={styles.walletIntroSection} image={data.bg}>
       <PageSectionColumns
         titleTop="Blockchain Made Easy for Everyone"
+        buttonClass="blue border-blue"
         title="Cryptopia Wallet"
         image={image}
         buttonText="Learn More"

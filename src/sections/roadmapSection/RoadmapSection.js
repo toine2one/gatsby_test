@@ -46,14 +46,45 @@ export default function RoadmapSection() {
       ) {
         ...defaultImageQuery
       }
+
+      roadmapCoinsNoOrnament: file(
+        relativePath: { eq: "roadmap/milestones/no_ornament/roadmap_coins.png" }
+      ) {
+        ...defaultImageQuery
+      }
+
+      roadmapWalletNoOrnament: file(
+        relativePath: {
+          eq: "roadmap/milestones/no_ornament/roadmap_wallet.png"
+        }
+      ) {
+        ...defaultImageQuery
+      }
+
+      roadmapMapNoOrnament: file(
+        relativePath: { eq: "roadmap/milestones/no_ornament/roadmap_map.png" }
+      ) {
+        ...defaultImageQuery
+      }
+
+      roadmapRocketNoOrnament: file(
+        relativePath: {
+          eq: "roadmap/milestones/no_ornament/roadmap_rocket.png"
+        }
+      ) {
+        ...defaultImageQuery
+      }
     }
   `)
 
   return (
-    <PageSection classes={styles.container} image={data.bg}>
+    <PageSection
+      classes={styles.container}
+      image={data.bg}
+      title="Cryptopia Roadmap"
+      subTitle="2021 - 2022"
+    >
       <div className={styles.content}>
-        <h1>Cryptopia Roadmap</h1>
-        <h2>2021 - 2022</h2>
         <div className={`${styles.roadmap} d-none d-lg-flex`}>
           <div className="container">
             <div className="row flex-nowrap">
@@ -119,6 +150,86 @@ export default function RoadmapSection() {
                     <li>Prepare for Public Beta Testnet</li>
                     <li>Start Public Beta Testnet</li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`${styles.roadmapVert} d-md-block d-lg-none`}>
+          <div className="container">
+            <div className="row">
+              <div className="col col-lg-12">
+                <div className={styles.milestone}>
+                  <div className={styles.milestoneImg}>
+                    <GatsbyImage
+                      className={styles.image}
+                      image={getImage(data.roadmapCoinsNoOrnament)}
+                      alt="Roadmap milestone 2021 Q4 - Proof of Concept"
+                    />
+                  </div>
+                  <div className={styles.milestoneInfo}>
+                    <h3>Q4 2021</h3>
+                    <h4 className={styles.q1a}>Proof of Concept</h4>
+                    <ul className={styles.q1a}>
+                      <li>Private Sale</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.milestone}>
+                  <div className={styles.milestoneImg}>
+                    <GatsbyImage
+                      className={styles.image}
+                      image={getImage(data.roadmapWalletNoOrnament)}
+                      alt="Roadmap milestone 2022 Q1 - NFT Marketplace"
+                    />
+                  </div>
+                  <div className={styles.milestoneInfo}>
+                    <h3>Q1 2022</h3>
+                    <h4 className={styles.q1}>Marketplace & Wallet</h4>
+                    <ul className={styles.q1}>
+                      <li>NFT Marketplace (50%)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.milestone}>
+                  <div className={styles.milestoneImg}>
+                    <GatsbyImage
+                      className={styles.image}
+                      image={getImage(data.roadmapMapNoOrnament)}
+                      alt="Roadmap milestone 2022 Q2 - Marketplace & Wallet"
+                    />
+                  </div>
+                  <div className={styles.milestoneInfo}>
+                    <h3>Q2 2022</h3>
+                    <h4 className={styles.q2}>Gameplay</h4>
+                    <ul className={styles.q2}>
+                      <li>Gameplay Navigation (90%)</li>
+                      <li>World Maps (50%)</li>
+                      <li>Game Resources (100%)</li>
+                      <li>Player Profile (40%)</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.milestone}>
+                  <div className={styles.milestoneImg}>
+                    <GatsbyImage
+                      className={styles.image}
+                      image={getImage(data.roadmapRocketNoOrnament)}
+                      alt="Roadmap milestone 2022 Q3 - Gameplay"
+                    />{" "}
+                  </div>
+                  <div className={styles.milestoneInfo}>
+                    <h3>Q3 2022</h3>
+                    <h4 className={styles.q3}>Public Beta Testnet</h4>
+                    <ul className={styles.q3}>
+                      <li>Wallet</li>
+                      <li>Start Public Sale</li>
+                      <li>Start Public Beta Testnet</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./NavBar.module.scss"
 
@@ -31,10 +31,12 @@ export default function NavBar() {
       <div className="container h-100">
         <div className="row h-100">
           <div className="col col-lg-2 h-100 d-flex align-items-center">
-            <GatsbyImage
-              className={styles.logo}
-              image={getImage(data.cryptopiaLogoTextWhite)}
-            ></GatsbyImage>
+            <Link to="/">
+              <GatsbyImage
+                className={styles.logo}
+                image={getImage(data.cryptopiaLogoTextWhite)}
+              ></GatsbyImage>
+            </Link>
           </div>
           <div className="col col-lg-8 h-100 d-flex justify-content-center align-items-center">
             <ul className="d-none d-lg-block">

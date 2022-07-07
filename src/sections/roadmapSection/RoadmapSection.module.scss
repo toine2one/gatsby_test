@@ -1,7 +1,6 @@
 @import "../../styles/colors";
 
 .container {
-  display: flex;
   background-color: #0c0b2d;
   position: relative;
   z-index: 1;
@@ -9,16 +8,11 @@
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 4rem;
 
-    h1 {
-      color: white;
-    }
-
-    h2 {
-      color: white;
-      margin-bottom: 3rem;
+    @media (max-width: 450px) {
+      margin-top: 0;
     }
 
     .roadmap {
@@ -192,7 +186,7 @@
 
       .milestone {
         display: flex;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
 
         .milestone-img {
           width: 20%;
@@ -205,6 +199,7 @@
 
         .milestone-info {
           width: 80%;
+          margin-left: 0.5rem;
 
           h3 {
             font-weight: 600;
@@ -304,6 +299,7 @@
             li {
               color: #aa97e9;
               margin-bottom: 0.25rem;
+              margin-left: 0.5rem;
             }
           }
         }

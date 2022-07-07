@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+@import "../../styles/fonts";
+
+.container {
+  position: relative;
+  background-color: $primary;
+  width: 100%;
+
+  .team-container {
+    margin-top: 4rem;
+    padding: 0 4rem;
+
+    .team-member {
+      margin: 4rem 0;
+
+      @media (max-width: 480px) {
+        margin: 2rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 7rem 0 9rem;
+      margin-top: 0rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
+}

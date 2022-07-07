@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 .faction-section {
+  position: relative;
   background-color: $primary;
   z-index: 0;
   display: flex;
@@ -8,14 +9,11 @@
   align-items: center;
   justify-content: center;
 
-  h1 {
-    text-align: center;
-    color: white;
+  .faction-containers {
+    padding: 0 5rem;
   }
 
-  h2 {
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
+  .mobile-image {
+    margin-bottom: 1rem;
   }
 }

@@ -1,0 +1,418 @@
+//TODO: make this styles scoped to tokenomics.js page
+// For now included in mainlayout
+
+@import "../styles/colors";
+@import "../styles/mixins";
+
+$h3-size: 1.6rem;
+
+.tokenomics-page {
+  padding-top: 5rem;
+
+  h1,
+  h2,
+  h3 {
+    color: white;
+    text-align: center;
+  }
+
+  p {
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    section {
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 1rem;
+    }
+  }
+
+  section.tokenomics {
+    width: 100%;
+    background-position-y: -10rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #1f2032;
+    background-image: url("/images/tokenomics/bg/bg_dots_top_dark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    header {
+      margin: 4rem 0;
+
+      h1,
+      h2 {
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .subject-point {
+      display: flex;
+      margin-bottom: 4rem;
+      padding: 0 8rem;
+      position: relative;
+      left: 5rem;
+
+      @media (max-width: 900px) {
+        padding: 0 0 0 1rem;
+        left: 0;
+      }
+
+      .subject-point-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 2rem 1.5rem;
+        width: 100%;
+        border-radius: 8px;
+        background: linear-gradient(
+          to right,
+          rgba(28, 29, 45, 1) 50%,
+          rgba(255, 255, 255, 0) 80%
+        );
+
+        h3,
+        p {
+          color: white;
+        }
+
+        .subject-point-img {
+          position: absolute;
+          top: 50%;
+          right: 7rem;
+          transform: translateY(-50%);
+
+          @media (max-width: 900px) {
+            width: 12rem;
+            right: -1rem;
+          }
+        }
+
+        .subject-point-index-container {
+          position: absolute;
+          top: -1rem;
+          left: -1.2rem;
+          border-radius: 50%;
+          width: 2.7rem;
+          height: 2.7rem;
+          border: 4px solid rgba(123, 102, 255, 0.7);
+          box-sizing: border-box;
+          box-shadow: 0 0 5px #7b66ff;
+
+          .subject-point-index {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.9;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: rgba(127, 17, 224, 0.5);
+            width: 1.8rem;
+            height: 1.8rem;
+            border: 1px solid black;
+            text-align: center;
+            color: white;
+            box-sizing: border-box;
+          }
+        }
+
+        h3 {
+          color: $gray;
+          text-align: left;
+          margin-top: 0;
+        }
+
+        p {
+          color: white;
+          margin-top: 1rem;
+          width: 65%;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  section.total-supply {
+    height: 100vh;
+    width: 100%;
+    background-color: #1f2032;
+    background-image: url("/images/tokenomics/bg/bg_dots_top.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 900px) {
+      height: initial;
+    }
+
+    header {
+      margin-top: 4rem;
+    }
+
+    h3 {
+      margin: 4rem 0 2rem 0;
+    }
+
+    .total-supply-distribution {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 900px) {
+        .col {
+          padding: initial 0;
+        }
+      }
+
+      @media (max-width: 900px) {
+        padding: 0 0;
+      }
+
+      ul {
+        @include reset-list;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          position: relative;
+          padding-left: 5rem;
+
+          @media (max-width: 900px) {
+            padding-left: 0;
+          }
+
+          p {
+            color: white;
+            width: 80%;
+            margin-left: 2rem;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+          }
+
+          .total-supply-distribution-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .total-supply-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  section.circ-supply {
+    height: 100vh;
+    background-image: url("/images/tokenomics/bg/bg_dots_middle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .circ-supply-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      @media (max-width: 900px) {
+        img {
+          width: 70%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .circ-supply-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        color: white;
+      }
+    }
+  }
+
+  section.funds {
+    background-color: $primary;
+    min-height: 70vh !important;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .funds-info {
+      @media (max-width: 900px) {
+        padding-left: 1rem;
+      }
+
+      p {
+        color: white;
+      }
+
+      ul {
+        background-color: #1c1d2d;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 75%;
+
+        @media (max-width: 900px) {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        li {
+          position: relative;
+          display: flex;
+          width: 100%;
+          margin: 0.5rem;
+
+          $cirlce-size: 0.8rem;
+          $border-w: 3px;
+
+          p {
+            padding-left: 1.3rem;
+            margin: 0;
+
+            &:last-of-type {
+              position: absolute;
+              right: 1rem;
+            }
+          }
+
+          &.marketing {
+            &:before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              content: " ";
+              border-radius: 50%;
+              width: $cirlce-size;
+              height: $cirlce-size;
+              border: $border-w solid #359ae7;
+            }
+
+            p {
+              &:last-of-type {
+                color: #359ae7;
+              }
+            }
+          }
+
+          &.legal {
+            &:before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              content: " ";
+              border-radius: 50%;
+              width: $cirlce-size;
+              height: $cirlce-size;
+              border: $border-w solid #ff672a;
+            }
+
+            p {
+              &:last-of-type {
+                color: #ff672a;
+              }
+            }
+          }
+
+          &.development {
+            &:before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              content: " ";
+              border-radius: 50%;
+              width: $cirlce-size;
+              height: $cirlce-size;
+              border: $border-w solid #ff9b05;
+            }
+
+            p {
+              &:last-of-type {
+                color: #ff9b05;
+              }
+            }
+          }
+
+          &.operational-cost {
+            &:before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              content: " ";
+              border-radius: 50%;
+              width: $cirlce-size;
+              height: $cirlce-size;
+              border: $border-w solid #ae3796;
+            }
+
+            p {
+              &:last-of-type {
+                color: #ae3796;
+              }
+            }
+          }
+
+          &.startup {
+            &:before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              content: " ";
+              border-radius: 50%;
+              width: $cirlce-size;
+              height: $cirlce-size;
+              border: $border-w solid #69a44e;
+            }
+
+            p {
+              &:last-of-type {
+                color: #69a44e;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .funds-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    > div {
+      border-top: 2px solid $secondaryDark;
+    }
+  }
+}

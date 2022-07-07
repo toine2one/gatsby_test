@@ -1,16 +1,18 @@
 @import "../../styles/colors";
 
 .container {
-  background-color: $secundary;
+  background-color: $secondary;
   border: 2px solid $blue;
   border-radius: 8px;
-  width: 100%;
+  width: 17rem;
   padding: 2.5rem 0 1rem 0;
   position: relative;
   cursor: pointer;
+  box-sizing: border-box;
 
   @media (max-width: 480px) {
     padding: 1rem 0;
+    width: 19rem;
   }
 
   p {
@@ -41,7 +43,7 @@
 
   .avatar-img {
     position: absolute;
-    top: -5.5rem;
+    top: -6.5rem;
     left: 50%;
     transform: translateX(-50%);
 

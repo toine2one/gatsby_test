@@ -2,7 +2,15 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./PageSection.module.scss"
 
-export default function PageSection({ children, image, classes }) {
+const headerSty = {}
+
+export default function PageSection({
+  children,
+  image,
+  classes,
+  title,
+  subTitle,
+}) {
   return (
     <div className={`${styles.container} ${classes}`}>
       <GatsbyImage
@@ -11,7 +19,18 @@ export default function PageSection({ children, image, classes }) {
         image={getImage(image)}
         alt="Section background"
       />
-      <div className={styles.content}>{children}</div>
+      {(title || subTitle) && (
+        <div className={styles.heading}>
+          {title && <h1>{title}</h1>}
+          {subTitle && <h2>{subTitle}</h2>}
+        </div>
+      )}
+      <div
+        className={styles.content}
+        style={{ height: title || subTitle ? "80%" : "initial" }}
+      >
+        {children}
+      </div>
     </div>
   )
 }

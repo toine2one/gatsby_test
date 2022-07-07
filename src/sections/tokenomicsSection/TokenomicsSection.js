@@ -1,7 +1,7 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import PageSection from "../../components/PageSection/PageSection"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import * as styles from "./TokenomicsSection.module.scss"
 
 export const defaultImageQuery = graphql`
@@ -34,7 +34,7 @@ export default function TokenomicsSection({ image }) {
   return (
     <PageSection classes={styles.container} image={data.bg}>
       <div className="container">
-        <div className="row wrap-reverse">
+        <div className="row flex-wrap-reverse">
           <div
             className={`${styles.info} col col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-center`}
           >
@@ -47,7 +47,10 @@ export default function TokenomicsSection({ image }) {
               our token is deflationary by nature. The more players there are,
               the higher the demand for CRT and, thus, the higher the value.
             </p>
-            <button className={`${styles.button} custom-btn blue`}>
+            <button
+              onClick={() => navigate("/tokenomics")}
+              className={`${styles.button} custom-btn blue border-blue`}
+            >
               Go to tokenomics page
             </button>
           </div>

@@ -13,6 +13,8 @@ import useModal from "../hooks/useModal"
 import RoadmapSection from "../sections/roadmapSection/RoadmapSection"
 import SEO from "../components/SEO"
 import TokenomicsSection from "../sections/tokenomicsSection/TokenomicsSection"
+import PageSectionColumns from "../components/PageSection/PageSectionColumns"
+import FaqSection from "../sections/faqSection/FaqSection"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
@@ -93,6 +95,7 @@ export default function Home({ data }) {
         </div>
       </MainConceptArtPageSection>
       <MainConceptArtPageSection
+        classes={`${styles.whitepaperSection} d-flex justify-content-center align-items-center w-100`}
         backgroundPlaceholderImgPath={
           data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
         }
@@ -100,39 +103,15 @@ export default function Home({ data }) {
           data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
         }
       >
-        <div
-          className={`${styles.whitepaperSection} h-100 d-flex align-items-center`}
-        >
-          <div className="container">
-            <div className="row flex-wrap-reverse">
-              <div
-                className={`${styles.info} col-lg-6 col-12 col-sm-12 d-flex flex-column justify-content-center`}
-              >
-                <h3>A World Based On</h3>
-                <h1>The Lost Revolutionary White Paper</h1>
-                <p>
-                  A few years after Satoshi Nakamoto’s Bitcoin white paper
-                  changed the world, another white paper of mysterious origin
-                  created a stir. Satoshi’s work states that the world is due
-                  for economic collapse due to its reliance on fiat currency. It
-                  would take only one crisis, such as climate change, to unleash
-                  an unmitigated global catastrophe. His startling proposal:
-                  Cryptopia World, a nation based on the blockchain, a new
-                  society would serve as an example for all others to follow.
-                </p>
-              </div>
-              <div
-                className={`${styles.whitepaperImage} col col-lg-6 col-12 col-sm-12 d-flex justify-content-center`}
-              >
-                <GatsbyImage
-                  loading="lazy"
-                  image={getImage(data.legacyWhitepaperGraphic)}
-                  alt="Legacy whitepaper graphic"
-                ></GatsbyImage>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PageSectionColumns
+          titleTop="A World Based On"
+          title="The Lost Revolutionary White Paper"
+          text="A few years after Satoshi Nakamoto’s Bitcoin white paperchanged the world, another white paper of mysterious origincreated a stir. Satoshi’s work states that the world is duefor economic collapse due to its reliance on fiat currency. Itwould take only one crisis, such as climate change, to unleashan unmitigated global catastrophe. His startling proposal:Cryptopia World, a nation based on the blockchain, a newsociety would serve as an example for all others to follow."
+          buttonText="Download"
+          image={data.legacyWhitepaperGraphic}
+          imageClass={styles.whitepaperImage}
+          buttonClass="dark"
+        ></PageSectionColumns>
       </MainConceptArtPageSection>
       <MainConceptArtPageSection
         backgroundPlaceholderImgPath={
@@ -150,12 +129,12 @@ export default function Home({ data }) {
           data.factionContainerTraditional,
         ]}
       ></FactionSection>
-
       <GameIntroSection image={data.gameplayProductionFrame}></GameIntroSection>
       <WalletIntroSection image={data.walletFrame}></WalletIntroSection>
       <TeamSection imageData={data}></TeamSection>
       <RoadmapSection></RoadmapSection>
       <TokenomicsSection />
+      <FaqSection></FaqSection>
     </MainLayout>
   )
 }

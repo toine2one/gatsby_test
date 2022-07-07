@@ -7,7 +7,9 @@ export default function PageSectionColumns({
   title,
   text,
   image,
+  imageClass,
   buttonText,
+  buttonClass,
   onButtonClick,
 }) {
   return (
@@ -20,14 +22,20 @@ export default function PageSectionColumns({
           <h1>{title}</h1>
           <p>{text}</p>
           <button
-            className={`${styles.button} custom-btn blue`}
+            className={`${styles.button} ${buttonClass} custom-btn`}
             onClick={onButtonClick}
           >
             {buttonText}
           </button>
         </div>
-        <div className={`${styles.image} col col-lg-6 col-12 col-sm-12`}>
-          <GatsbyImage loading="lazy" image={getImage(image)}></GatsbyImage>
+        <div
+          className={`${styles.image} col col-lg-6 col-12 col-sm-12 d-flex justify-content-center`}
+        >
+          <GatsbyImage
+            className={imageClass}
+            loading="lazy"
+            image={getImage(image)}
+          ></GatsbyImage>
         </div>
       </div>
     </div>

@@ -31,6 +31,7 @@ export default function GameIntroSection({ image }) {
         titleTop="Groundbreaking"
         title="Blockchain-Driven Metaverse Game"
         image={image}
+        buttonClass="blue border-blue"
         buttonText="Learn More"
         text={
           "Welcome to Cryptopia, a persistent world, open-ended, multiplayer strategy and role-playing game that provides a solution to the problem of our unstable world economy. Built entirely on the blockchain, gamers can enjoy the security, visibility, and other benefits of this technology while having fun creating their own ideal society."
