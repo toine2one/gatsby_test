@@ -8,9 +8,7 @@ export default function FaqQuestion({
   activeQuestion,
   active,
 }) {
-  useEffect(() => {
-    console.log(activeQuestion + "yooo")
-  }, [activeQuestion])
+  useEffect(() => {}, [activeQuestion])
 
   return (
     <li

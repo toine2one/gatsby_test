@@ -49,7 +49,7 @@ export default function TokenomicsSection({ image }) {
             </p>
             <button
               onClick={() => navigate("/tokenomics")}
-              className={`${styles.button} custom-btn blue border-blue`}
+              className={`${styles.button} btn-custom blue border-blue`}
             >
               Go to tokenomics page
             </button>

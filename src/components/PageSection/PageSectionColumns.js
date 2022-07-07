@@ -22,7 +22,7 @@ export default function PageSectionColumns({
           <h1>{title}</h1>
           <p>{text}</p>
           <button
-            className={`${styles.button} ${buttonClass} custom-btn`}
+            className={`${styles.button} ${buttonClass} btn-custom`}
             onClick={onButtonClick}
           >
             {buttonText}

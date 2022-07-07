@@ -15,7 +15,7 @@ body {
 // ---------- Buttons ----------
 
 button {
-  &.custom-btn {
+  &.btn-custom {
     position: relative;
     cursor: pointer;
     outline: inherit;
@@ -66,14 +66,6 @@ button {
       }
     }
 
-    &:disabled {
-      &:hover {
-        border: 2px solid $grayFade;
-      }
-      opacity: 0.3;
-      cursor: default;
-    }
-
     &:focus {
       outline: none;
     }
@@ -86,6 +78,14 @@ button {
       background-color: #4826b4;
       color: white;
       border: 2px solid #4826b4;
+    }
+
+    &:disabled {
+      &:hover {
+        border: initial;
+      }
+      opacity: 0.8;
+      cursor: default;
     }
 
     img {
@@ -133,4 +133,38 @@ p {
 
 .padding-sides-0 {
   padding: 0 0 !important;
+}
+
+// Inputs ---------------
+
+input {
+  &.input-custom {
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-family: "Barlow Semi Condensed";
+    color: $gray;
+    font-size: 1.2rem;
+    resize: none;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $darkBlue;
+    }
+
+    &:disabled {
+      background-color: #1c1e2e;
+      border: 2px solid #2b2c3f;
+    }
+
+    &.purple {
+      background-color: #4c3287;
+      border: 0;
+      color: white;
+    }
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
