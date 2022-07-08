@@ -1,0 +1,53 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.icon-container {
+  position: relative;
+  height: 2.65rem;
+  width: 2.65rem;
+  cursor: pointer;
+  @include no-select;
+
+  &.icon-container--border {
+    background-color: #1f2032;
+    border-radius: 10px;
+    border: 2px solid $gray;
+  }
+
+  .show {
+    img {
+      transition: 0.3s;
+      width: 1.1rem;
+      transform: scale(1);
+    }
+  }
+
+  div {
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      transform: scale(0);
+      transition: 0.3s;
+      transition-property: transform;
+    }
+  }
+}
+
+// Small devices (landscape phones, 480px and up)
+@media (max-width: 480px) {
+  .icon-container {
+    .show {
+      img {
+        transition: 0.3s;
+        width: 1.5rem;
+        transform: scale(1);
+      }
+    }
+  }
+}

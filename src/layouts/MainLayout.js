@@ -1,8 +1,7 @@
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 import React, { useEffect, useState } from "react"
 import Footer from "../components/Footer/Footer"
 import NavBar from "../components/Navbar/NavBar"
-import { AppConstants } from "../Constants"
 import { AppContext } from "../contexts/AppContext"
 import { getQueryParams } from "../helpers/getQueryParams"
 import { ContactProfileService } from "../services/ContactProfileService"
@@ -10,9 +9,34 @@ import "../styles/global.scss"
 
 export default function MainLayout({ children }) {
   const [loaded, setLoaded] = useState(false)
-  const [contactProfile, setContactProfile] = useState()
+  const [contactProfile, setContactProfile] = useState(null)
 
-  const initIntersectionObserve = () => {
+  const handleContactProfileVerificationCredentials = async () => {
+    try {
+      const params = getQueryParams(window.location.href)
+      if (params.email && params.code) {
+        const result = await ContactProfileService.verifyContactAsync(
+          params.email,
+          params.code
+        )
+        if (result) {
+          ContactProfileService.storeContactProfile(result)
+          setContactProfile(contactProfile)
+          navigate("/")
+        }
+      }
+    } catch (error) {
+      console.log(error)
+      // TODO: show error modal
+    }
+  }
+
+  const loadContactProfile = () => {
+    const contactProfile = ContactProfileService.getStoredContactProfile()
+    setContactProfile(contactProfile)
+  }
+
+  useEffect(() => {
     var lazyloadImages
     var lazyloadStyle
 
@@ -68,40 +92,15 @@ export default function MainLayout({ children }) {
             window.removeEventListener("orientationChange", lazyload)
           }
         }, 20)
-        document.addEventListener("scroll", lazyload)
-        window.addEventListener("resize", lazyload)
-        window.addEventListener("orientationChange", lazyload)
       }
+      document.addEventListener("scroll", lazyload)
+      window.addEventListener("resize", lazyload)
+      window.addEventListener("orientationChange", lazyload)
     }
-  }
-
-  const handleContactProfileVerificationCredentials = async () => {
-    try {
-      const params = getQueryParams(window.location.href)
-      if (params.email && params.code) {
-        const result = await ContactProfileService.verifyContactAsync(
-          params.email,
-          params.code
-        )
-        if (result) {
-          ContactProfileService.storeContactProfile(result)
-          setContactProfile(contactProfile)
-          navigate("/")
-        }
-      }
-    } catch (error) {
-      console.log(error)
-      // TODO: show error modal
-    }
-  }
-
-  useEffect(() => {
-    initIntersectionObserve()
-    handleContactProfileVerificationCredentials()
 
     if (!loaded) {
-      const contactProfile = ContactProfileService.getStoredContactProfile()
-      setContactProfile(contactProfile)
+      handleContactProfileVerificationCredentials()
+      loadContactProfile()
       setLoaded(true)
     }
   }, [contactProfile])
@@ -114,6 +113,7 @@ export default function MainLayout({ children }) {
             contactProfile: contactProfile,
             hasContactProfile:
               contactProfile !== undefined && contactProfile !== null,
+            onContactProfileChangeHandler: () => loadContactProfile(),
           }}
         >
           <NavBar></NavBar>

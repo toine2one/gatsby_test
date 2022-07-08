@@ -1,6 +1,6 @@
 import React from "react"
-import * as styles from "./PageSectionColumns.module.scss"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as styles from "./PageSectionColumns.module.scss"
 
 export default function PageSectionColumns({
   titleTop,

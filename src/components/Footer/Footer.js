@@ -143,12 +143,12 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.footerEnd}>
-        <div class="container">
-          <div class="row">
-            <div class="col col-6 col-lg-6 padding-sides-0 flex-center-ver">
+        <div className="container">
+          <div className="row">
+            <div className="col col-6 col-lg-6 padding-sides-0 flex-center-ver">
               <p>Copyright © {new Date().getFullYear()} Cryptopia Ltd.</p>
             </div>
-            <div class="col col-6 col-lg-6 padding-sides-0 nav__social flex-center-ver"></div>
+            <div className="col col-6 col-lg-6 padding-sides-0 nav__social flex-center-ver"></div>
           </div>
         </div>
       </div>

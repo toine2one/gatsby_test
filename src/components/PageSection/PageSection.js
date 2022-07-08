@@ -2,8 +2,6 @@ import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./PageSection.module.scss"
 
-const headerSty = {}
-
 export default function PageSection({
   children,
   image,

@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import * as styles from "./NavBar.module.scss"
 import Modal from "../Modal/Modal"
-import JoinModalContent from "../JoinModal/JoinModalContent"
+import JoinModalContent from "../JoinModalContent/JoinModalContent"
 import useModal from "../../hooks/useModal"
+import IconContainer from "../IconContainer/IconContainer"
+import MobileNavMenu from "../MobileNavMenu/MobileNavMenu"
+import * as styles from "./NavBar.module.scss"
 
 export const defaultImageQuery = graphql`
   fragment defaultImageQuery on File {
@@ -20,6 +22,7 @@ export const defaultImageQuery = graphql`
 
 export default function NavBar() {
   const { isShowing, toggle } = useModal()
+  const [showMobileMenu, setShowMobileMenu] = useState()
 
   const data = useStaticQuery(graphql`
     query {
@@ -58,15 +61,26 @@ export default function NavBar() {
             </div>
             <div className="col col-lg-2 h-100 d-flex justify-content-end align-items-center">
               <button
-                className={`${styles.joinButton} btn-custom blue`}
+                className={`${styles.joinButton} btn-custom blue d-none d-lg-block`}
                 onClick={toggle}
               >
                 JOIN NOW
               </button>
+              <div className="d-lg-none">
+                <IconContainer
+                  iconClosedEl={<img src="/svg/icons/icon_hamburgerMenu.svg" />}
+                  iconShowEl={<img src="/svg/icons/cross_white.svg" />}
+                  onOpen={() => setShowMobileMenu(true)}
+                  onClose={() => setShowMobileMenu(false)}
+                />
+              </div>
             </div>
           </div>
         </div>
       </nav>
+
+      <MobileNavMenu show={showMobileMenu}></MobileNavMenu>
+
       <Modal isShowing={isShowing} hide={toggle}>
         <JoinModalContent></JoinModalContent>
       </Modal>

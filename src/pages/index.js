@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout"
 import MainConceptArtPageSection from "../components/MainConceptArtPageSection/MainConceptArtPageSection"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import * as styles from "./index.module.scss"
 import GameIntroSection from "../sections/gameIntroSection/GameIntroSection"
 import WalletIntroSection from "../sections/walletIntroSection/WalletIntroSection"
 import FactionSection from "../sections/factionSection/FactionSection"
@@ -15,6 +14,7 @@ import SEO from "../components/SEO"
 import TokenomicsSection from "../sections/tokenomicsSection/TokenomicsSection"
 import PageSectionColumns from "../components/PageSection/PageSectionColumns"
 import FaqSection from "../sections/faqSection/FaqSection"
+import * as styles from "./index.module.scss"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()

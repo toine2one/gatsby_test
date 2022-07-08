@@ -1,0 +1,174 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.mobile-nav-menu {
+  position: fixed;
+  right: 0;
+  top: 5rem;
+  height: 100vh;
+  width: 0;
+  background-color: $primary;
+  transition: all 0.3s ease-in-out;
+  transition-property: width;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 800;
+  padding-bottom: 10rem;
+
+  .content {
+    .join-box {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+
+      button {
+        width: 80%;
+      }
+    }
+
+    ul {
+      transition: all 0.3s ease-in-out;
+      transition-property: opacity;
+      opacity: 0;
+      @include reset-list;
+
+      li {
+        position: relative;
+        border-radius: 8px;
+        padding: 0 1rem 0 0.5rem;
+        background-color: #22233b;
+        color: white;
+        margin: 0.5rem;
+        z-index: 12;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 1rem 0;
+          font-size: 1.2rem;
+
+          text-decoration: none;
+          font-weight: 100;
+          color: white;
+        }
+
+        &.header {
+          position: relative;
+          border-bottom: 2px solid #4826b4;
+          color: white;
+          font-family: "Barlow semi Condensed";
+          font-size: 1.5rem;
+          padding: 1rem;
+          background-color: transparent;
+          border-radius: 0;
+
+          &:after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            content: "";
+            height: 1rem;
+            width: 7rem;
+            background: url("https://cryptopia.com/cdn-cgi/image/format=auto,quality=100/images/icons/icon_border_detail_blue_x4.png");
+            background-repeat: no-repeat;
+          }
+        }
+
+        &.header-account {
+          @extend .header;
+          color: $darkBlue;
+          display: flex;
+          align-items: center;
+          color: white;
+          left: -0.5rem;
+
+          img.header-account-identicon {
+            border-radius: 50%;
+            width: 4rem;
+            border: 2px solid $darkBlue;
+            margin-right: 1rem;
+          }
+
+          div {
+            p {
+              font-size: 1.3rem;
+              margin: 0;
+              font-family: "Barlow Condensed Light";
+            }
+
+            p.nav__username {
+              color: white;
+            }
+
+            p.nav__address {
+              color: $gray;
+            }
+          }
+        }
+
+        &.downloadOpt {
+          img {
+            &.icon {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 0.8rem;
+              float: right;
+              width: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .connect {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 3rem;
+        margin-right: 1rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin: 0;
+        font-family: "Barlow Condensed Light";
+      }
+    }
+  }
+
+  &.mobile-nav-menu--show {
+    width: 100%;
+
+    ul {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  nav.mobile-nav-menu {
+    display: none;
+  }
+}
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  nav.mobile-nav-menu {
+    display: none;
+  }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  nav.mobile-nav-menu {
+    display: none;
+  }
+}

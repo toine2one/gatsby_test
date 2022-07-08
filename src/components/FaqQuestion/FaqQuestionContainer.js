@@ -58,6 +58,7 @@ export default function FaqQuestionContainer({ children }) {
       <ul className={styles.faq}>
         {questions.map(q => (
           <FaqQuestion
+            key={q.question.replaceAll(" ", "_")}
             question={q.question}
             activeQuestion={activeQuestionState}
             setActiveQuestion={setActiveQuestion}
