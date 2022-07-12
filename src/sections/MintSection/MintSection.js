@@ -81,7 +81,9 @@ export default function MintSection() {
         </div>
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-center">
-            <button className="btn-custom">GET EARLY ACCESS</button>
+            <a href="https://cryptopia.com/early-access">
+              <button className="btn-custom">GET EARLY ACCESS</button>
+            </a>
           </div>
         </div>
       </div>
