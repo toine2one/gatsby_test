@@ -15,6 +15,7 @@ import PageSectionColumns from "../components/PageSection/PageSectionColumns"
 import FaqSection from "../sections/faqSection/FaqSection"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
+import MintSection from "../sections/MintSection/MintSection"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
@@ -102,13 +103,13 @@ export default function Home({ data }) {
         ></PageSectionColumns>
       </PageSection>
       <PageSection image={data.bg3} classes={styles.storySection}>
-        <div class="container">
-          <div class="row height-100 flex-center-ver">
+        <div className="container">
+          <div className="row height-100 flex-center-ver">
             <div
-              class="col col-sm-12 col-lg-7 col-md-8 height-100 flex-center-ver"
-              style="align-items: center;"
+              className="col col-sm-12 col-lg-7 col-md-8 height-100 flex-center-ver"
+              style={{ alignItems: "center" }}
             >
-              <div class="flex-dir-column flex-center-hor">
+              <div className="flex-dir-column flex-center-hor">
                 <h2>Cryptopia</h2>
                 <p>
                   Cryptopia is an independent city-state society based on the
@@ -136,7 +137,7 @@ export default function Home({ data }) {
                 </p>
               </div>
             </div>
-            <div class="col col-sm-12 col-lg-5 col-md-4 d-none d-sm-block d-md-block"></div>
+            <div className="col col-sm-12 col-lg-5 col-md-4 d-none d-sm-block d-md-block"></div>
           </div>
         </div>
       </PageSection>
@@ -154,6 +155,7 @@ export default function Home({ data }) {
       <RoadmapSection></RoadmapSection>
       <TokenomicsSection />
       <FaqSection></FaqSection>
+      <MintSection></MintSection>
     </MainLayout>
   )
 }

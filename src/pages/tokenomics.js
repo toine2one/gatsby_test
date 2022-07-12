@@ -280,7 +280,7 @@ export default function tokenomics({ data }) {
 export const query = graphql`
   query {
     transactions: file(
-      relativePath: { eq: "tokenomics/icon_tokenomics_coin_transactions.png" }
+      relativePath: { eq: "tokenomics/icon_tokenomics_ coin_transactions.png" }
     ) {
       ...defaultImageQuery
     }
