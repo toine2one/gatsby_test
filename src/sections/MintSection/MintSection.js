@@ -47,18 +47,19 @@ export default function MintSection() {
 
   return (
     <PageSection image={data.bg} classes={styles.container}>
-      <div className="container">
+      <h1>Early Access</h1>
+      <div className="container h-100 d-flex align-items-center flex-column justify-content-center">
         <div className="row flex-nowrap">
           <div className="col-lg-3 footer-section__footer__mint-option">
             <GatsbyImage
               className={styles.ship}
-              image={getImage(data.roadmapCoins)}
+              image={getImage(data.ecoShip)}
               alt="Eco faction ship with flag"
             />
           </div>
           <div className="col-lg-3 footer-section__footer__mint-option">
             <GatsbyImage
-              className={styles.techShip}
+              className={styles.ship}
               image={getImage(data.techShip)}
               alt="Tech faction ship with flag"
             />
@@ -79,8 +80,8 @@ export default function MintSection() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-12">
-            <button>GET EARLY ACCESS</button>
+          <div className="col-lg-12 d-flex justify-content-center">
+            <button className="btn-custom">GET EARLY ACCESS</button>
           </div>
         </div>
       </div>

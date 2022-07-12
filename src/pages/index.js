@@ -103,13 +103,13 @@ export default function Home({ data }) {
         ></PageSectionColumns>
       </PageSection>
       <PageSection image={data.bg3} classes={styles.storySection}>
-        <div className="container">
-          <div className="row height-100 flex-center-ver">
+        <div className="container h-100">
+          <div className="row h-100 d-flex align-items-center">
             <div
-              className="col col-sm-12 col-lg-7 col-md-8 height-100 flex-center-ver"
+              className="col col-sm-12 col-lg-7 col-md-8 h-100"
               style={{ alignItems: "center" }}
             >
-              <div className="flex-dir-column flex-center-hor">
+              <div className="d-flex justify-content-center flex-column h-100">
                 <h2>Cryptopia</h2>
                 <p>
                   Cryptopia is an independent city-state society based on the
@@ -155,7 +155,9 @@ export default function Home({ data }) {
       <RoadmapSection></RoadmapSection>
       <TokenomicsSection />
       <FaqSection></FaqSection>
-      <MintSection></MintSection>
+      <div className="d-none d-lg-block">
+        <MintSection></MintSection>
+      </div>
     </MainLayout>
   )
 }
