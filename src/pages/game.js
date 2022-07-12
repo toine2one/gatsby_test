@@ -4,7 +4,7 @@ import PageSection from "../components/PageSection/PageSection"
 import PageSectionImageCenter from "../components/PageSection/PageSectionImageCenter"
 import FactionSection from "../sections/factionSection/FactionSection"
 import { graphql } from "gatsby"
-import * as styles from "./game.module.scss"
+import * as styles from "./game_style.module.scss"
 import PageSectionColumns from "../components/PageSection/PageSectionColumns"
 
 export default function game({ data }) {
