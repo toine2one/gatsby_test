@@ -91,7 +91,7 @@ export default function NavBar() {
         </div>
         <div
           className={`${styles.navMint} ${
-            scrollPosY > 100 ? styles.compact : ""
+            scrollPosY > 50 ? styles.compact : ""
           }`}
         >
           <img className={styles.mintLight} src="/images/mint_bar/light.png" />
@@ -109,7 +109,7 @@ export default function NavBar() {
           <a href="https://cryptopia.com/early-access" target="_blank">
             <img
               className={styles.mintButton}
-              src="/images/mint_bar/mint_button.png"
+              src="/images/mint_bar/mint_button.webp"
             />
           </a>
         </div>

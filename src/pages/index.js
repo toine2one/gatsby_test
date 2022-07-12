@@ -67,9 +67,7 @@ export default function Home({ data }) {
         backgroundPlaceholderImgPath={
           data.bg1.childImageSharp.gatsbyImageData.placeholder.fallback
         }
-        backgroundImgPath={
-          data.bg1.childImageSharp.gatsbyImageData.images.fallback.src
-        }
+        backgroundImgPath="/images/bg/main_concept_art_1.webp"
       >
         <div className={styles.topSection}>
           <div onClick={toggle}>
@@ -99,9 +97,7 @@ export default function Home({ data }) {
         backgroundPlaceholderImgPath={
           data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
         }
-        backgroundImgPath={
-          data.bg2.childImageSharp.gatsbyImageData.images.fallback.src
-        }
+        backgroundImgPath="/images/bg/main_concept_art_2.webp"
       >
         <PageSectionColumns
           titleTop="A World Based On"
@@ -117,9 +113,7 @@ export default function Home({ data }) {
         backgroundPlaceholderImgPath={
           data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
         }
-        backgroundImgPath={
-          data.bg3.childImageSharp.gatsbyImageData.images.fallback.src
-        }
+        backgroundImgPath="/images/bg/main_concept_art_3.webp"
       ></MainConceptArtPageSection>
       <FactionSection
         images={[
