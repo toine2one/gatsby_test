@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import useModal from "../../hooks/useModal"
 import JoinModalContent from "../JoinModalContent/JoinModalContent"
@@ -22,13 +23,14 @@ export default function MobileNavMenu({ show }) {
         <ul className={styles.list}>
           <li className={styles.header}>Pages</li>
           <li className={styles.navigate}>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className={styles.navigate}>
-            <a>Game</a>
+            <Link to="/game">Game</Link>
           </li>
           <li className={styles.navigate}>
-            <a>Wallet</a>
+            <Link to="/wallet">Wallet</Link>
+            <Link to="/tokenomics">Tokenomics</Link>
           </li>
         </ul>
       </div>

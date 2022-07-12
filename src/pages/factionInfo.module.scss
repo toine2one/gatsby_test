@@ -1,81 +1,85 @@
 @import "../styles/colors";
 
-.faction-info-tabs {
-  display: flex;
-  justify-content: center;
-  margin-top: 10rem;
+.faction-info-page {
+  background-color: $primary;
+  padding-top: 15rem;
 
-  .col {
+  .faction-info-tabs {
     display: flex;
     justify-content: center;
 
-    @media (max-width: 480px) {
-      padding: 0;
-    }
-  }
+    .col {
+      display: flex;
+      justify-content: center;
 
-  .faction-info-tabs-item {
-    position: relative;
-    background-color: #2b2c3f;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    color: white;
-
-    @media (max-width: 480px) {
-      padding: 0.5rem;
-      margin: 0.5rem 0.5rem 0 0.5rem;
-    }
-
-    img {
-      position: absolute;
-      top: -8rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 5rem;
-      filter: grayscale(100%);
-
-      @media (max-width: 353px) {
-        width: 4rem;
+      @media (max-width: 480px) {
+        padding: 0;
       }
     }
 
-    &.faction-info-tabs-industrial--active {
-      background-color: $secondaryDark;
-      color: $factionIndustrial;
+    .faction-info-tabs-item {
+      position: relative;
+      background-color: #2b2c3f;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      color: white;
 
-      img {
-        filter: none;
+      @media (max-width: 480px) {
+        padding: 0.5rem;
+        margin: 0.5rem 0.5rem 0 0.5rem;
       }
-    }
 
-    &.faction-info-tabs-eco--active {
-      background-color: $secondaryDark;
-      color: $factionEco;
+      .faction-info-tabs-item-img {
+        position: absolute;
+        top: -8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5rem;
+        filter: grayscale(100%);
 
-      img {
-        filter: none;
+        @media (max-width: 353px) {
+          width: 4rem;
+        }
       }
-    }
 
-    &.faction-info-tabs-tech--active {
-      background-color: $secondaryDark;
-      color: $factionTech;
+      &.faction-info-tabs-industrial-active {
+        background-color: $secondaryDark;
+        color: $factionIndustrial;
 
-      img {
-        filter: none;
+        img {
+          filter: none;
+        }
       }
-    }
 
-    &.faction-info-tabs-traditional--active {
-      background-color: $secondaryDark;
-      color: $factionTraditional;
+      &.faction-info-tabs-eco-active {
+        background-color: $secondaryDark;
+        color: $factionEco;
 
-      img {
-        filter: none;
+        img {
+          filter: none;
+        }
+      }
+
+      &.faction-info-tabs-tech-active {
+        background-color: $secondaryDark;
+        color: $factionTech;
+
+        img {
+          filter: none;
+        }
+      }
+
+      &.faction-info-tabs-traditional-active {
+        background-color: $secondaryDark;
+        color: $factionTraditional;
+
+        img {
+          filter: none;
+        }
       }
     }
   }
@@ -131,9 +135,11 @@
     }
 
     .faction-info-content-advisor-bio-text {
+      position: relative;
       color: white;
       padding: 0 1rem;
       margin-top: 1rem;
+      z-index: 1;
 
       .col {
         position: relative;
@@ -145,22 +151,20 @@
       }
     }
 
-    img {
-      &.faction-info-content-advisor-bio-gradient-top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-      }
+    .faction-info-content-advisor-bio-gradient-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
 
-      &.faction-info-content-advisor-bio-gradient-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-      }
+    .faction-info-content-advisor-bio-gradient-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
     }
   }
 }

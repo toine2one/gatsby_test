@@ -1,0 +1,131 @@
+@import "../../styles/colors";
+
+$bottomPos: 2rem;
+$rightPos: 1rem;
+
+.bullet-menu {
+  position: fixed;
+  right: $rightPos;
+  bottom: $bottomPos;
+  z-index: 999;
+
+  a {
+    position: fixed;
+    right: $rightPos;
+    bottom: $bottomPos;
+    transition: 0.25s ease-in-out;
+  }
+
+  .social-bullet {
+    position: absolute;
+    border-radius: 50%;
+    width: 2.9rem;
+    height: 2.9rem;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    right: $rightPos;
+    bottom: $bottomPos;
+
+    &.opensea {
+      background-color: #2081e2 !important;
+    }
+
+    &.youtube {
+      background-color: #ff0000 !important;
+    }
+
+    &.fb {
+      background-color: #3b5998 !important;
+    }
+
+    &.twitter {
+      background-color: #1da1f2 !important;
+    }
+
+    &.reddit {
+      background-color: #5f99cf !important;
+    }
+
+    &.discord {
+      background-color: black !important;
+    }
+
+    &.instagram {
+      background-color: #dd2a7b !important;
+    }
+
+    &.menu {
+      background-color: $darkBlue !important;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &.shadow {
+      filter: drop-shadow(3px 3px 3px rgba(34, 34, 34, 1));
+    }
+
+    &.hover-scale {
+      &:hover {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.opened {
+    a {
+      ._item {
+        transition: 0.25s ease-in-out;
+        right: $rightPos;
+      }
+
+      &.item-1 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + 3.8rem);
+      }
+
+      &.item-2 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 2));
+      }
+
+      &.item-3 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 3));
+      }
+
+      &.item-4 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 4));
+      }
+
+      &.item-5 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 5));
+      }
+
+      &.item-6 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 6));
+      }
+
+      &.item-7 {
+        @extend ._item;
+        bottom: calc(#{$bottomPos} + calc(3.8rem * 7));
+      }
+    }
+  }
+}

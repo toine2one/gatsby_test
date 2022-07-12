@@ -2,9 +2,11 @@ import { navigate } from "gatsby"
 import React, { useEffect, useState } from "react"
 import Footer from "../components/Footer/Footer"
 import NavBar from "../components/Navbar/NavBar"
+import SocialBullets from "../components/SocialBullets/SocialBullets"
 import { AppContext } from "../contexts/AppContext"
 import { getQueryParams } from "../helpers/getQueryParams"
 import { ContactProfileService } from "../services/ContactProfileService"
+import SocialBulletsMobile from "../components/SocialBulletsMobile/SocialBulletsMobile"
 import "../styles/global.scss"
 
 export default function MainLayout({ children }) {
@@ -21,7 +23,7 @@ export default function MainLayout({ children }) {
         )
         if (result) {
           ContactProfileService.storeContactProfile(result)
-          setContactProfile(contactProfile)
+          loadContactProfile()
           navigate("/")
         }
       }
@@ -121,6 +123,12 @@ export default function MainLayout({ children }) {
           <Footer></Footer>
         </AppContext.Provider>
       )}
+      <div className="d-none d-lg-block">
+        <SocialBullets />
+      </div>
+      <div className="d-lg-none">
+        <SocialBulletsMobile />
+      </div>
     </div>
   )
 }

@@ -158,6 +158,7 @@ export default function JoinModalContent() {
   }
 
   const getEmailSubscriptionElement = () => {
+    console.log(hasContactProfile)
     if (!hasContactProfile) {
       return emailInputElement()
     }

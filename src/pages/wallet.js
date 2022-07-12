@@ -19,12 +19,25 @@ export default function wallet({ data }) {
             image={data.walletMain}
           ></PageSectionImageCenter>
         </PageSection>
-        <PageSection image={data.bgWavesRight}>
+        <PageSection image={data.bgWavesRight} classes={styles.multisigSection}>
           <PageSectionColumns
             title="Multisig Security"
             text="Your Cryptopia account is your wallet. Non-custodial with a baked-in Multisig feature, it functions as both an in-game and dedicated stand-alone wallet."
             image={data.walletMultisig}
-          ></PageSectionColumns>
+          >
+            <ul>
+              <li>On-Chain Multi Factor Authentication (2FA, MFA)</li>
+              <li>
+                Multisig Wallet (One Wallet can have multiple owners, makes it
+                safe)
+              </li>
+              <li>
+                Stores Native Cryptocurrencies (ETH), Tokens (ERC20) and NFT’s
+                (ERC721)
+              </li>
+              <li>Transfer, Swap, Buy and Sell directly from your wallet</li>
+            </ul>
+          </PageSectionColumns>
         </PageSection>
         <PageSection image={data.bgWavesLeft}>
           <PageSectionImageCenter
@@ -33,13 +46,25 @@ export default function wallet({ data }) {
             image={data.walletNFTDeck}
           ></PageSectionImageCenter>
         </PageSection>
-        <PageSection image={data.bgWavesRight}>
+        <PageSection
+          image={data.bgWavesRight}
+          classes={styles.blockchainMadeEasySection}
+        >
           <PageSectionColumns
             imageLeft={true}
             title="Blockchain Made Easy for Everyone"
             text="The current blockchain gaming user experience is complicated, similar to the early internet. Our integrated wallet is the solution for large adoption:"
             image={data.walletSwap}
-          ></PageSectionColumns>
+          >
+            <ul>
+              <li>Abstracts away complicated blockchain mechanics</li>
+              <li>
+                Makes playing Cryptopia as easy as browsing the web in
+                {` ${new Date().getFullYear()}`}
+              </li>
+              <li>Doesn’t require MetaMask or other external wallets</li>
+            </ul>
+          </PageSectionColumns>
         </PageSection>
       </div>
     </MainLayout>

@@ -197,10 +197,14 @@ export default function game({ data }) {
   )
 }
 
-export const bgImageQuery = graphql`
-  fragment bgImageQuery on File {
+export const bg = graphql`
+  fragment bg on File {
     childImageSharp {
-      gatsbyImageData(blurredOptions: { width: 10 }, placeholder: BLURRED)
+      gatsbyImageData(
+        blurredOptions: { width: 10 }
+        placeholder: NONE
+        quality: 75
+      )
     }
   }
 `
@@ -220,23 +224,23 @@ export const defaultImageQuery = graphql`
 export const query = graphql`
   query {
     bgGameMap0: file(relativePath: { eq: "bg/bg_tile_floor_0.png" }) {
-      ...defaultImageQuery
+      ...bg
     }
 
     bgGameMap1: file(relativePath: { eq: "bg/bg_tile_floor_1.png" }) {
-      ...defaultImageQuery
+      ...bg
     }
 
     bgGameMap2: file(relativePath: { eq: "bg/bg_tile_floor_2.png" }) {
-      ...defaultImageQuery
+      ...bg
     }
 
     bgGameMap3: file(relativePath: { eq: "bg/bg_tile_floor_3.png" }) {
-      ...bgImageQuery
+      ...bg
     }
 
     gameplayTypes: file(relativePath: { eq: "bg/bg_gameplay_types.png" }) {
-      ...bgImageQuery
+      ...defaultImageQuery
     }
 
     gameplaySwap: file(

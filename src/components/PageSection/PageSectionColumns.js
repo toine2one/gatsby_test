@@ -48,7 +48,7 @@ export default function PageSectionColumns({
       )
     } else {
       return (
-        <div className="row flex-wrap-reverse">
+        <div className="row">
           <div
             className={`${styles.image} col col-lg-6 col-12 col-sm-12 d-flex justify-content-start`}
           >

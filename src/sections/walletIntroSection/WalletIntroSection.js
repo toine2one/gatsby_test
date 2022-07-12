@@ -1,7 +1,7 @@
 import React from "react"
 import PageSection from "../../components/PageSection/PageSection"
 import PageSectionColumns from "../../components/PageSection/PageSectionColumns"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import * as styles from "./WalletIntroSection.module.scss"
 
 export const defaultImageQuery = graphql`
@@ -33,6 +33,7 @@ export default function WalletIntroSection({ image }) {
         title="Cryptopia Wallet"
         image={image}
         buttonText="Learn More"
+        onButtonClick={() => navigate("/wallet")}
         text={
           "Your Cryptopia account is your wallet. Non-custodial with a baked-in Multisig feature, it functions as both an in-game and dedicated stand-alone wallet. The current blockchain gaming user experience is complicated, similar to the early internet. Our integrated wallet is the solution for large adoption"
         }
