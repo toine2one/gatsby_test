@@ -15,6 +15,7 @@ import TokenomicsSection from "../sections/tokenomicsSection/TokenomicsSection"
 import PageSectionColumns from "../components/PageSection/PageSectionColumns"
 import FaqSection from "../sections/faqSection/FaqSection"
 import * as styles from "./index.module.scss"
+import PageSection from "../components/PageSection/PageSection"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
@@ -63,12 +64,7 @@ export default function Home({ data }) {
   return (
     <MainLayout>
       <SEO schemaMarkup={organizationSchemaMarkup} />
-      <MainConceptArtPageSection
-        backgroundPlaceholderImgPath={
-          data.bg1.childImageSharp.gatsbyImageData.placeholder.fallback
-        }
-        backgroundImgPath="/images/bg/main_concept_art_1.webp"
-      >
+      <PageSection image={data.bg1}>
         <div className={styles.topSection}>
           <div onClick={toggle}>
             <GatsbyImage
@@ -91,13 +87,10 @@ export default function Home({ data }) {
             </div>
           </Modal>
         </div>
-      </MainConceptArtPageSection>
-      <MainConceptArtPageSection
+      </PageSection>
+      <PageSection
+        image={data.bg2}
         classes={`${styles.whitepaperSection} d-flex justify-content-center align-items-center w-100`}
-        backgroundPlaceholderImgPath={
-          data.bg2.childImageSharp.gatsbyImageData.placeholder.fallback
-        }
-        backgroundImgPath="/images/bg/main_concept_art_2.webp"
       >
         <PageSectionColumns
           titleTop="A World Based On"
@@ -108,13 +101,8 @@ export default function Home({ data }) {
           imageClass={styles.whitepaperImage}
           buttonClass="dark"
         ></PageSectionColumns>
-      </MainConceptArtPageSection>
-      <MainConceptArtPageSection
-        backgroundPlaceholderImgPath={
-          data.bg3.childImageSharp.gatsbyImageData.placeholder.fallback
-        }
-        backgroundImgPath="/images/bg/main_concept_art_3.webp"
-      ></MainConceptArtPageSection>
+      </PageSection>
+      <PageSection image={data.bg3}></PageSection>
       <FactionSection
         images={[
           data.factionContainerEco,
@@ -156,15 +144,15 @@ export const defaultImageQuery = graphql`
 export const query = graphql`
   query {
     bg1: file(relativePath: { eq: "bg/main_concept_art_1.png" }) {
-      ...bgImageQuery
+      ...defaultImageQuery
     }
 
     bg2: file(relativePath: { eq: "bg/main_concept_art_2.png" }) {
-      ...bgImageQuery
+      ...defaultImageQuery
     }
 
     bg3: file(relativePath: { eq: "bg/main_concept_art_3.png" }) {
-      ...bgImageQuery
+      ...defaultImageQuery
     }
 
     playbutton: file(relativePath: { eq: "main/video_play_button.png" }) {
