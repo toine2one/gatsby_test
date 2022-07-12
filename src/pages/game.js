@@ -1,6 +1,5 @@
 import React from "react"
 import MainLayout from "../layouts/MainLayout"
-import MainConceptArtPageSection from "../components/MainConceptArtPageSection/MainConceptArtPageSection"
 import PageSection from "../components/PageSection/PageSection"
 import PageSectionImageCenter from "../components/PageSection/PageSectionImageCenter"
 import FactionSection from "../sections/factionSection/FactionSection"
@@ -204,18 +203,6 @@ export const bg = graphql`
         blurredOptions: { width: 10 }
         placeholder: NONE
         quality: 75
-      )
-    }
-  }
-`
-
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
       )
     }
   }

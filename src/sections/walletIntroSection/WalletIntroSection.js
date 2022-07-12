@@ -4,18 +4,6 @@ import PageSectionColumns from "../../components/PageSection/PageSectionColumns"
 import { useStaticQuery, graphql, navigate } from "gatsby"
 import * as styles from "./WalletIntroSection.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function WalletIntroSection({ image }) {
   const data = useStaticQuery(graphql`
     query {

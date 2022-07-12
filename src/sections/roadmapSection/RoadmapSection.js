@@ -4,18 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "./RoadmapSection.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function RoadmapSection() {
   const data = useStaticQuery(graphql`
     query {

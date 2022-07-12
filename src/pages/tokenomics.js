@@ -277,18 +277,6 @@ export default function tokenomics({ data }) {
   )
 }
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export const query = graphql`
   query {
     transactions: file(

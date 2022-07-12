@@ -8,18 +8,6 @@ import IconContainer from "../IconContainer/IconContainer"
 import MobileNavMenu from "../MobileNavMenu/MobileNavMenu"
 import * as styles from "./NavBar.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function NavBar() {
   const { isShowing, toggle } = useModal()
   const [showMobileMenu, setShowMobileMenu] = useState()

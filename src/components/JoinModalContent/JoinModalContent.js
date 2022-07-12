@@ -8,18 +8,6 @@ import {
 } from "../../services/ContactProfileService"
 import * as styles from "./JoinModalContent.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function JoinModalContent() {
   const [emailInput, setEmailInput] = useState("")
   const [emailIsValid, setEmailIsValid] = useState(false)

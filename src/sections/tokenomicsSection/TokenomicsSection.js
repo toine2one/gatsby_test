@@ -4,18 +4,6 @@ import PageSection from "../../components/PageSection/PageSection"
 import { useStaticQuery, graphql, navigate } from "gatsby"
 import * as styles from "./TokenomicsSection.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function TokenomicsSection({ image }) {
   const data = useStaticQuery(graphql`
     query {

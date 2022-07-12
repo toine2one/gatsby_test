@@ -1,6 +1,5 @@
 import React from "react"
 import MainLayout from "../layouts/MainLayout"
-import MainConceptArtPageSection from "../components/MainConceptArtPageSection/MainConceptArtPageSection"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import GameIntroSection from "../sections/gameIntroSection/GameIntroSection"
@@ -102,7 +101,45 @@ export default function Home({ data }) {
           buttonClass="dark"
         ></PageSectionColumns>
       </PageSection>
-      <PageSection image={data.bg3}></PageSection>
+      <PageSection image={data.bg3} classes={styles.storySection}>
+        <div class="container">
+          <div class="row height-100 flex-center-ver">
+            <div
+              class="col col-sm-12 col-lg-7 col-md-8 height-100 flex-center-ver"
+              style="align-items: center;"
+            >
+              <div class="flex-dir-column flex-center-hor">
+                <h2>Cryptopia</h2>
+                <p>
+                  Cryptopia is an independent city-state society based on the
+                  blockchain, where citizens can buy, sell, vote, and perform
+                  other essential activities using a safe, secure, and
+                  transparent system. Additionally, as a seasteading city-state,
+                  Cryptopia lies outside of any existing nation’s borders,
+                  allowing its citizens free reign to experiment and create the
+                  community they want for themselves. Cryptopia has become
+                  humanity’s haven, the reboot of society the world needs to
+                  survive.
+                </p>
+                <h2>Rise of the Factions</h2>
+                <p>
+                  Not everyone interpreted the new society the same way. Some
+                  believed Cryptopia was meant to create fantastic wealth, while
+                  others saw an opportunity to start fresh and save the
+                  environment. Still others believed that essential policies
+                  should be based on technology, while others argued they should
+                  be made with the people’s consensus. Inevitably, these
+                  disparate agendas splintered the citizens into four Factions.
+                  Each group appointed a member to serve as the “face” of their
+                  faction, who would speak on their behalf and mentor new
+                  members.
+                </p>
+              </div>
+            </div>
+            <div class="col col-sm-12 col-lg-5 col-md-4 d-none d-sm-block d-md-block"></div>
+          </div>
+        </div>
+      </PageSection>
       <FactionSection
         images={[
           data.factionContainerEco,
@@ -134,7 +171,7 @@ export const defaultImageQuery = graphql`
     childImageSharp {
       gatsbyImageData(
         blurredOptions: { width: 10 }
-        placeholder: NONE
+        placeholder: BLURRED
         quality: 100
       )
     }

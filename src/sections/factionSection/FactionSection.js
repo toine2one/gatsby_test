@@ -4,18 +4,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import PageSection from "../../components/PageSection/PageSection"
 import * as styles from "./FactionSection.module.scss"
 
-export const defaultImageQuery = graphql`
-  fragment defaultImageQuery on File {
-    childImageSharp {
-      gatsbyImageData(
-        blurredOptions: { width: 10 }
-        placeholder: NONE
-        quality: 100
-      )
-    }
-  }
-`
-
 export default function FactionSection({ images }) {
   const data = useStaticQuery(graphql`
     query {
@@ -88,7 +76,7 @@ export default function FactionSection({ images }) {
           </div>
         </div>
       </div>
-      <div className="container d-lg-none">
+      <div className="container d-lg-none d-flex h-100 align-items-center flex-column justify-content-center">
         <div className="row">
           <div className="col col-6 col-sm-6 d-flex justify-content-center">
             <GatsbyImage
