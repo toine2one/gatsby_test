@@ -139,21 +139,6 @@ export default function MainLayout({ children }) {
       </div>
 
       <Script
-        id="google-tag-manager-src"
-        src="https://www.googletagmanager.com/gtag/js?id=UA-208669100-1"
-      />
-      <Script
-        id="google-tag-manager-script-2"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-208669100-1');`,
-        }}
-      />
-
-      <Script
         id="facebook-script"
         dangerouslySetInnerHTML={{
           __html: `!function (f, b, e, v, n, t, s) {
@@ -171,24 +156,6 @@ export default function MainLayout({ children }) {
         fbq('track', 'PageView');`,
         }}
       />
-      <Helmet>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=346546480789814&ev=PageView&noscript=1"
-          />
-        </noscript>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KPV8K9S"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden"
-          ></iframe>
-        </noscript>
-      </Helmet>
     </div>
   )
 }
