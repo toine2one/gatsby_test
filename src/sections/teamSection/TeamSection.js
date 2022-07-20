@@ -152,6 +152,16 @@ export default function TeamSection({ imageData }) {
               image={imageData.teamAvatarMatt}
             />
           </div>
+          <div
+            className={`${styles.teamMember} col-lg-3 col-md-5 d-flex justify-content-center`}
+          >
+            <TeamMember
+              name="John Mark Adriano"
+              role="Game Developer"
+              bio="John Mark is a game developer. He has half a decade of experience in creating games, websites and demos for international clients. In Cryptopia, he works as a game developer contributing not just in gameplay but also in implementing technical and user interface systems."
+              image={imageData.teamAvatarJohn}
+            />
+          </div>
         </div>
       </div>
 

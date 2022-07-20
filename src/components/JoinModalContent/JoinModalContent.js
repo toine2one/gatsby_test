@@ -7,6 +7,7 @@ import {
   ContactProfileStatus,
 } from "../../services/ContactProfileService"
 import * as styles from "./JoinModalContent.module.scss"
+import { AppConstants } from "../../Constants"
 
 export default function JoinModalContent() {
   const [emailInput, setEmailInput] = useState("")
@@ -125,6 +126,7 @@ export default function JoinModalContent() {
     )
   }
 
+  //
   const connectWithMetamaskElement = () => {
     return (
       <div className={styles.connectMetamask}>
@@ -170,7 +172,9 @@ export default function JoinModalContent() {
           image={getImage(data.discord)}
           alt="Discord logo"
         />
-        <button className="btn-custom">JOIN</button>
+        <a target="_blank" href={AppConstants["DiscordURL"]}>
+          <button className="btn-custom">JOIN</button>
+        </a>
       </div>
     </div>
   )

@@ -345,5 +345,9 @@ export const query = graphql`
     ) {
       ...defaultImageQuery
     }
+
+    teamAvatarJohn: file(relativePath: { eq: "team/avatars/john_avatar.png" }) {
+      ...defaultImageQuery
+    }
   }
 `
