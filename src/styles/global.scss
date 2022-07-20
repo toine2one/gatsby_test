@@ -187,3 +187,24 @@ input {
     background: #383e43;
   }
 }
+
+.orientation-hor-overlay {
+  display: none;
+
+  @media screen and (orientation: landscape) and (min-device-width: 100px) and (max-device-width: 900px) and (max-device-height: 500px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    z-index: 999;
+
+    img {
+      width: 30rem;
+    }
+  }
+}

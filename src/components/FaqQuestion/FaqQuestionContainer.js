@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { AppConstants } from "../../Constants"
 import FaqQuestion from "./FaqQuestion"
 import * as styles from "./FaqQuestion.module.scss"
+import parse from "html-react-parser"
 
 export default function FaqQuestionContainer({ children }) {
   const [questions, setQuestions] = useState([])
@@ -40,8 +42,7 @@ export default function FaqQuestionContainer({ children }) {
       },
       {
         question: "Do you have NFTs for sale?",
-        answer:
-          "Yes, we have a limited amount of early access NFTs. These will give you early access to our public beta on the testnet from Q3 2022*. And you will be the first to explore Cryptopia on the mainnet from Q2 2023*! For more info go here",
+        answer: `Yes, we have a limited amount of early access NFTs. These will give you early access to our public beta on the testnet from Q3 2022*. And you will be the first to explore Cryptopia on the mainnet from Q2 2023*! <a target="blank" href="${AppConstants["EarlyAccessURL"]}">For more info go here</a>.`,
       },
     ]
     setQuestions(questions)
@@ -64,7 +65,7 @@ export default function FaqQuestionContainer({ children }) {
             setActiveQuestion={setActiveQuestion}
             active={activeQuestionState === q.question.replaceAll(" ", "_")}
           >
-            {q.answer}
+            {parse(q.answer)}
           </FaqQuestion>
         ))}
       </ul>

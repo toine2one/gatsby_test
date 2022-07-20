@@ -32,7 +32,7 @@ export default function wallet({ data }) {
                 safe)
               </li>
               <li>
-                Stores Native Cryptocurrencies (ETH), Tokens (ERC20) and NFT’s
+                Stores Native Cryptocurrencies (ETH), Tokens (ERC20) and NFTs
                 (ERC721)
               </li>
               <li>Transfer, Swap, Buy and Sell directly from your wallet</li>
@@ -42,7 +42,7 @@ export default function wallet({ data }) {
         <PageSection image={data.bgWavesLeft}>
           <PageSectionImageCenter
             title="Built in NFT deck"
-            subtitle="Stores Native Cryptocurrencies (ETH), Tokens (ERC20) and NFT’s (ERC721)"
+            subtitle="Stores Native Cryptocurrencies (ETH), Tokens (ERC20) and NFTs (ERC721)"
             image={data.walletNFTDeck}
           ></PageSectionImageCenter>
         </PageSection>

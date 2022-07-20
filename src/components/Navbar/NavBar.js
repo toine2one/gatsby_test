@@ -7,6 +7,7 @@ import useModal from "../../hooks/useModal"
 import IconContainer from "../IconContainer/IconContainer"
 import MobileNavMenu from "../MobileNavMenu/MobileNavMenu"
 import * as styles from "./NavBar.module.scss"
+import { AppConstants } from "../../Constants"
 
 export default function NavBar() {
   const { isShowing, toggle } = useModal()
@@ -56,6 +57,9 @@ export default function NavBar() {
                 </Link>
                 <Link to="/tokenomics">
                   <li>Tokenomics</li>
+                </Link>
+                <Link to={AppConstants["Medium"]} target="_blank">
+                  <li>Blog</li>
                 </Link>
               </ul>
             </div>

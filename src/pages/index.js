@@ -95,7 +95,7 @@ export default function Home({ data }) {
         <PageSectionColumns
           titleTop="A World Based On"
           title="The Lost Revolutionary White Paper"
-          text="A few years after Satoshi Nakamoto’s Bitcoin white paperchanged the world, another white paper of mysterious origincreated a stir. Satoshi’s work states that the world is duefor economic collapse due to its reliance on fiat currency. Itwould take only one crisis, such as climate change, to unleashan unmitigated global catastrophe. His startling proposal:Cryptopia World, a nation based on the blockchain, a newsociety would serve as an example for all others to follow."
+          text="A few years after Satoshi Nakamoto’s Bitcoin white paper changed the world, another white paper of mysterious origin created a stir. Satoshi’s work states that the world is due for economic collapse due to its reliance on fiat currency. It would take only one crisis, such as climate change, to unleash an unmitigated global catastrophe. His startling proposal: Cryptopia World, a nation based on the blockchain, a new society would serve as an example for all others to follow."
           buttonText="Download"
           image={data.legacyWhitepaperGraphic}
           imageClass={styles.whitepaperImage}

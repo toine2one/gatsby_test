@@ -12,7 +12,9 @@ export default function game({ data }) {
     <MainLayout>
       <div className={styles.container}>
         <PageSection classes={styles.topSection} image={data.bgGameMap0}>
-          <h1>Groundbreaking Blockchain-Driven Metaverse Game</h1>
+          <h1>
+            Groundbreaking<br></br> Blockchain-Driven<br></br> Metaverse Game
+          </h1>
         </PageSection>
         <PageSection classes={styles.playToEarnSection} image={data.bgGameMap1}>
           <PageSectionImageCenter
@@ -44,29 +46,26 @@ export default function game({ data }) {
           ]}
         ></FactionSection>
         <PageSection
-          classes={styles.gameplayTypesSection}
+          classes={`${styles.gameplayTypesSection}`}
           image={data.gameplayTypes}
         >
           <PageSectionImageCenter></PageSectionImageCenter>
         </PageSection>
         <PageSection
-          classes={styles.bgTycoon}
           image={data.bgTycoon}
           title="Tycoon Gameplay"
           subTitle="Build a business empire by claiming land and profiting from its resources."
-        >
-          <PageSectionImageCenter></PageSectionImageCenter>
-        </PageSection>
+        ></PageSection>
 
-        <PageSection image={data.bgMotherboard}>
+        <PageSection image={data.bgMotherboard} classes={styles.columnSection}>
           <PageSectionColumns
             title="Claim"
-            image={data.tilesNFTShip}
+            image={data.tilesClaim}
             text="Stake your claim on land tiles. Cryptopia has a limited amount of land but potentially unlimited players. This creates scarcity that raises land values over time. Land also contains valuable resources for you to harvest."
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection image={data.bgMotherboard}>
+        <PageSection image={data.bgMotherboard} classes={styles.columnSection}>
           <PageSectionColumns
             title="Construct"
             imageLeft={true}
@@ -75,7 +74,7 @@ export default function game({ data }) {
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection image={data.bgHexSides}>
+        <PageSection image={data.bgHexSides} classes={styles.columnSection}>
           <PageSectionColumns
             title="Harvest"
             image={data.tilesNFTHarvest}
@@ -83,16 +82,22 @@ export default function game({ data }) {
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection image={data.bgTechLinesLeft}>
+        <PageSection
+          image={data.bgTechLinesLeft}
+          classes={styles.columnSection}
+        >
           <PageSectionColumns
             image={data.tilesNFTGenerate}
             imageLeft={true}
             title="Generate"
-            text="Burn your Coal tokens in your Power plant to generate electricity, or trade them on the open market.</br></br></br>Electricity is an important commodity, almost everything in Cryptopia uses electricity to run."
+            text="Burn your Coal tokens in your Power plant to generate electricity, or trade them on the open market.</br></br></br> Electricity is an important commodity, almost everything in Cryptopia uses electricity to run."
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection image={data.bgTechLinesRight}>
+        <PageSection
+          image={data.bgTechLinesRight}
+          classes={styles.columnSection}
+        >
           <PageSectionColumns
             image={data.tilesNFTMetropolis}
             title="Build a metropolis"
@@ -100,7 +105,7 @@ export default function game({ data }) {
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection classes={styles.defiEmpireSection} image={data.bgHexSides}>
+        <PageSection classes={styles.verticalSection} image={data.bgHexSides}>
           <PageSectionImageCenter
             title="Build your own DeFi empire"
             subtitle="Cash in on fees when other players use your DeFi projects"
@@ -108,7 +113,7 @@ export default function game({ data }) {
           ></PageSectionImageCenter>
         </PageSection>
 
-        <PageSection classes={styles.defiEmpireSection} image={data.bgHexSides}>
+        <PageSection classes={styles.verticalSection} image={data.bgHexSides}>
           <PageSectionImageCenter
             title="Not enough capital to bootstrap your business empire? Go Public!"
             subtitle="Start a publicly traded company and allow other players to buy your shares (ERC20)"
@@ -121,11 +126,9 @@ export default function game({ data }) {
           image={data.bgAdventure}
           title="Adventure Gameplay"
           subTitle="Choose a career, develop personal skills, and become an in-demand professional"
-        >
-          <PageSectionImageCenter></PageSectionImageCenter>
-        </PageSection>
+        ></PageSection>
 
-        <PageSection image={data.bgWavesLeft}>
+        <PageSection image={data.bgWavesLeft} classes={styles.columnSection}>
           <PageSectionColumns
             image={data.tilesNFTShip}
             title="Ships"
@@ -133,7 +136,7 @@ export default function game({ data }) {
           ></PageSectionColumns>
         </PageSection>
 
-        <PageSection image={data.bgWavesRight}>
+        <PageSection image={data.bgWavesRight} classes={styles.columnSection}>
           <PageSectionColumns
             image={data.adventureGlobe}
             imageLeft={true}
@@ -147,12 +150,10 @@ export default function game({ data }) {
           image={data.bgWorkforce}
           title="Career"
           subTitle="The better your skills, the more quest types will be available to you."
-        >
-          <PageSectionImageCenter></PageSectionImageCenter>
-        </PageSection>
+        ></PageSection>
 
         <PageSection
-          classes={styles.defiEmpireSection}
+          classes={styles.verticalSection}
           image={data.bgDotWaves0Mirrored}
         >
           <PageSectionImageCenter
@@ -163,7 +164,7 @@ export default function game({ data }) {
         </PageSection>
 
         <PageSection
-          classes={styles.defiEmpireSection}
+          classes={styles.verticalSection}
           image={data.bgDotWaves0Mirrored}
         >
           <PageSectionImageCenter
@@ -173,18 +174,15 @@ export default function game({ data }) {
           ></PageSectionImageCenter>
         </PageSection>
 
-        <PageSection
-          classes={styles.defiEmpireSection}
-          image={data.bgDotWaves0}
-        >
+        <PageSection classes={styles.verticalSection} image={data.bgDotWaves0}>
           <PageSectionImageCenter
             title="Sabotage"
-            subtitle="Faction may send Saboteurs to infiltrate each other's buildings and slow down production"
+            subtitle="Faction may send Saboteurs to infiltrate each other's buildings and slow down production."
             image={data.shareholderGameplay}
           ></PageSectionImageCenter>
         </PageSection>
 
-        <PageSection classes={styles.bgWorkforce} image={data.bgDotWaves1}>
+        <PageSection classes={styles.verticalSection} image={data.bgDotWaves1}>
           <PageSectionImageCenter
             title="Loyalty"
             subtitle="Owners can protect against saboteurs by increasing loyalty with loyalty cards"
@@ -337,6 +335,12 @@ export const query = graphql`
     }
 
     bgDotWaves1: file(relativePath: { eq: "bg/bg_dot_waves_1.png" }) {
+      ...defaultImageQuery
+    }
+
+    tilesClaim: file(
+      relativePath: { eq: "concepts/tiles_nft/tiles_nft_title_deed.png" }
+    ) {
       ...defaultImageQuery
     }
 

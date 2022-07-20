@@ -11,6 +11,7 @@ const shared = {
   YoutubeURL: "https://www.youtube.com/c/CryptopiaOfficial",
   Medium: "https://blog.cryptopia.com/",
   OpenseaCollectionURL: "https://opensea.io/collection/cryptopia-metaverse",
+  EarlyAccessURL: "https://cryptopia.com/early-access",
 }
 
 if (devMode) {

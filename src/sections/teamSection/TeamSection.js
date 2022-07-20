@@ -28,7 +28,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Hansco Leek"
               role="Co-founder"
-              bio="Hansco Leek is a co-founder of Cryptopia. He has been involved in cryptocurrency since 2016 as an investor and entrepreneur. Together with Frank, they founded Cryptopia - the Groundbreaking Blockchain-Driven Metaverse game. Hans has been helping with operations and providing necessary resources to kickstart Cryptopia in the past 2 year."
+              bio="Hansco Leek is the co-founder of Cryptopia. He has been involved in cryptocurrency since 2016 as an investor and entrepreneur. Together with Frank, they founded Cryptopia - the Groundbreaking Blockchain-Driven Metaverse game. Hans has been helping with operations and providing necessary resources to kickstart Cryptopia in the past 2 year."
               image={imageData.teamAvatarHansco}
             />
           </div>
@@ -58,7 +58,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Pichapen Sörum"
               role="Chief Marketing Officer"
-              bio="Pichapen has 8 years of experience working with start-ups, and emerging enterprises. Her expertise in structuring the communication matrix that drives the business strategy, generating insights & experiential details leading to the marketing plan will assist Cryptopia's exponential grow d-flex w-100 justify-content-center align-items-centerth."
+              bio="Pichapen has 8 years of experience working with start-ups, and emerging enterprises. Her expertise in structuring the communication matrix that drives the business strategy, generating insights & experiential details leading to the marketing plan will assist Cryptopia's exponential growth."
               image={imageData.teamAvatarPichapen}
             />
           </div>
@@ -68,7 +68,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Ami Mandel"
               role="Chief Operating Officer"
-              bio="Ami is a marketer and entrepreneur that has worked in the blockchain space since 2017. With his marketing and branding company, he has helped multiple blockchain startups to successfully market and grow d-flex w-100 justify-content-center align-items-center their businesses. As COO of Cryptopia, Ami is leading the development of Cryptopia’s core foundations and driving the day-to-day operations of the Cryptopia team."
+              bio="Ami is a marketer and entrepreneur that has worked in the blockchain space since 2017. With his marketing and branding company, he has helped multiple blockchain startups to successfully market and grow their businesses. As COO of Cryptopia, Ami is leading the development of Cryptopia’s core foundations and driving the day-to-day operations of the Cryptopia team."
               image={imageData.teamAvatarAmi}
             />
           </div>
@@ -98,7 +98,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Lauderic Labapis"
               role="Community Manager"
-              bio="Laudie is a hardcore gamer with 15 years of experience in Customer Service and Social Media Management. He is skilled in leading others to deliver results in the metaverse and is an expert in leveraging digital platforms to promote community grow d-flex w-100 justify-content-center align-items-centerth."
+              bio="Laudie is a hardcore gamer with 15 years of experience in Customer Service and Social Media Management. He is skilled in leading others to deliver results in the metaverse and is an expert in leveraging digital platforms to promote community growth."
               image={imageData.teamAvatarLauderic}
             />
           </div>
@@ -148,7 +148,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Matthew Sloan"
               role="Lead Game Designer"
-              bio="Lead Game Designer for Cryptopia. Matthew Sloan has over 9 years of experience building games using Unity3D. Having published games on multiple platforms and created the world's first GA-NFT or Game As Non-Fungible Token Matthew brings the perfect balance of technical skill and creative design. Matthew has a high passion for developing and designing and is essential to the team in bringing the AAA HQ experience into the Cryptopian Metaverse."
+              bio="Lead Game Designer for Cryptopia. Matthew Sloan has over 9 years of experience building games using Unity3D. Having published games on multiple platforms and created the world's first GA-NFT or Game As Non-Fungible Token, Matthew brings the perfect balance of technical skill and creative design. Matthew has a high passion for developing and designing and is essential to the team in bringing the AAA HQ experience into the Cryptopian Metaverse."
               image={imageData.teamAvatarMatt}
             />
           </div>
@@ -177,7 +177,7 @@ export default function TeamSection({ imageData }) {
           >
             <TeamMember
               name="Oğuz Boduroğlu"
-              role="Web Designer & 3D Modeller"
+              role="Web Designer & 3D Modeler"
               bio="Oguz is a graphic designer and game artist with more than 10 years of experience. In the past decade, he has gained a vast amount of experience, doing extensive work in various companies all over the world. He is the one behind Cryptopia's design conceptualization and intriguing visuals."
               image={imageData.teamAvatarOguz}
             />
@@ -188,7 +188,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Mark Aragona"
               role="Creative Writer"
-              bio="Published writer with 12 years of experience writing fiction, web copy, blogs, and articles. As a fantasy/video game writer, I provide compelling and engaging stories for video games or books, as well as e - book game guides and FAQs."
+              bio="Published writer with 12 years of experience writing fiction, web copy, blogs, and articles. As a fantasy/video game writer, he provide's compelling and engaging stories for video games or books, as well as e-book game guides and FAQs."
               image={imageData.teamAvatarMarkA}
             />
           </div>
@@ -228,7 +228,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Stefan Offringa"
               role="Financial Advisor"
-              bio="Stefan is an experienced corporate finance professional, entrepreneur and NFT investor. He is very active in mergers & acquisitions, fundraising for grow d-flex w-100 justify-content-center align-items-centerth companies and private equity. Stefan has a financial as well as a technical background."
+              bio="Stefan is an experienced corporate finance professional, entrepreneur and NFT investor. He is very active in mergers & acquisitions, fundraising for growth companies and private equity. Stefan has a financial as well as a technical background."
               image={imageData.teamAvatarStefan}
             />
           </div>
