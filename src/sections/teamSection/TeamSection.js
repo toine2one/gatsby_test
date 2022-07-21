@@ -68,7 +68,7 @@ export default function TeamSection({ imageData }) {
             <TeamMember
               name="Ami Mandel"
               role="Chief Operating Officer"
-              bio="Ami is a marketer and entrepreneur that has worked in the blockchain space since 2017. With his marketing and branding company, he has helped multiple blockchain startups to successfully market and grow their businesses. As COO of Cryptopia, Ami is leading the development of Cryptopia’s core foundations and driving the day-to-day operations of the Cryptopia team."
+              bio="Ami is a marketer and entrepreneur who has worked in the blockchain space since 2017. With his marketing and branding company, he has helped multiple blockchain startups to successfully market and grow their businesses. As COO of Cryptopia, Ami is leading the development of Cryptopia’s core foundations and driving the day-to-day operations of the Cryptopia team."
               image={imageData.teamAvatarAmi}
             />
           </div>

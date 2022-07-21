@@ -16,6 +16,7 @@ import FaqSection from "../sections/faqSection/FaqSection"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
 import MintSection from "../sections/MintSection/MintSection"
+import { Helmet } from "react-helmet"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
