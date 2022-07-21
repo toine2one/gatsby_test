@@ -90,11 +90,15 @@ export default function NavBar() {
           <div className={styles.mintMessage}>
             <img
               className="d-none d-md-block"
+              width="181"
+              height="11"
               src="/images/mint_bar/segments_left.png"
             />
             <h2>GET YOUR EARLY-ACCESS SHIP NOW</h2>
             <img
               className="d-none d-md-block"
+              width="181"
+              height="11"
               src="/images/mint_bar/segments_right.png"
             />
           </div>
