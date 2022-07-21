@@ -25,7 +25,8 @@ const SEO = ({ title, description, image, article, schemaMarkup }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <>
+      <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -48,7 +49,7 @@ const SEO = ({ title, description, image, article, schemaMarkup }) => {
         schemaMarkup.map(m => (
           <script type="application/ld+json">{JSON.stringify(m)}</script>
         ))}
-    </Helmet>
+    </>
   )
 }
 
