@@ -20,6 +20,7 @@ export default function game({ data }) {
           <PageSectionImageCenter
             image={data.productionGameplay}
             title="Play to Earn in a Next-Gen Crypto Game"
+            subtitle="Claim land tiles, construct buildings, or complete quests and build your career"
           ></PageSectionImageCenter>
         </PageSection>
 
@@ -27,6 +28,7 @@ export default function game({ data }) {
           <PageSectionImageCenter
             image={data.defiGameplay}
             title="For Crypto Savvies and Gamers alike"
+            subtitle="Suitable for traditional gamers and those closely involved with crypto "
           ></PageSectionImageCenter>
         </PageSection>
 
