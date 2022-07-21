@@ -30,11 +30,9 @@ export default function FactionSection({ images }) {
   `)
 
   return (
-    <PageSection
-      classes={styles.factionSection}
-      title="Factions"
-      subTitle="Which side will you take"
-    >
+    <div className={styles.factionSection}>
+      <h1>Factions</h1>
+      <h2>Which side will you take</h2>
       <div
         className={`${styles.factionContainers} container d-flex justify-content-center align-items-center d-none d-lg-block`}
       >
@@ -110,6 +108,6 @@ export default function FactionSection({ images }) {
           </div>
         </div>
       </div>
-    </PageSection>
+    </div>
   )
 }

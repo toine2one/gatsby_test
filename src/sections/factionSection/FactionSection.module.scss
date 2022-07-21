@@ -1,6 +1,15 @@
 @import "../../styles/colors";
 
 .faction-section {
+  min-height: 100vh !important;
+  max-height: initial !important;
+
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
   position: relative;
   background-color: $primary;
   z-index: 0;

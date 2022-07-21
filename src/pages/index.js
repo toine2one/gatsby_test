@@ -1,6 +1,6 @@
 import React from "react"
 import MainLayout from "../layouts/MainLayout"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import GameIntroSection from "../sections/gameIntroSection/GameIntroSection"
 import WalletIntroSection from "../sections/walletIntroSection/WalletIntroSection"
@@ -16,6 +16,7 @@ import FaqSection from "../sections/faqSection/FaqSection"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
 import MintSection from "../sections/MintSection/MintSection"
+import { AppConstants } from "../Constants"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
@@ -57,6 +58,9 @@ export default function Home({ data }) {
           buttonText="Download"
           image={data.legacyWhitepaperGraphic}
           imageClass={styles.whitepaperImage}
+          onButtonClick={() =>
+            window.open(AppConstants["legacyWhitepaperGithubRepo"], "_blank")
+          }
           buttonClass="dark"
         ></PageSectionColumns>
       </PageSection>

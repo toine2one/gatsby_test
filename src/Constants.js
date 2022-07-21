@@ -12,6 +12,8 @@ const shared = {
   Medium: "https://blog.cryptopia.com/",
   OpenseaCollectionURL: "https://opensea.io/collection/cryptopia-metaverse",
   EarlyAccessURL: "https://cryptopia.com/early-access",
+  legacyWhitepaperGithubRepo:
+    "https://github.com/cryptopia-com/whitepaper-legacy/blob/main/Cryptopia_Legacy__White_Paper.pdf",
 }
 
 if (devMode) {
