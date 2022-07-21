@@ -16,55 +16,12 @@ import FaqSection from "../sections/faqSection/FaqSection"
 import * as styles from "./index.module.scss"
 import PageSection from "../components/PageSection/PageSection"
 import MintSection from "../sections/MintSection/MintSection"
-import { Helmet } from "react-helmet"
 
 export default function Home({ data }) {
   const { isShowing, toggle } = useModal()
 
-  const organizationSchemaMarkup = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Corporation",
-      name: "Cryptopia Inc.",
-      alternateName: "Cryptopia Metaverse",
-      url: "https://cryptopia.com",
-      logo: "https://cryptopia.com/icon-512.png",
-      sameAs: [
-        "https://www.facebook.com/cryptopiacom",
-        "https://twitter.com/Cryptopia_OFCL",
-        "https://www.instagram.com/cryptopia_official",
-        "https://www.youtube.com/c/CryptopiaOfficial",
-        "https://www.linkedin.com/company/cryptopiametaverse",
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      name: "Welcome to Cryptopia",
-      description:
-        "Ships are about to get real! Cryptopia's foundation has been laid and it's time to join a faction. Who will you be in the new world? What ethos do you follow? Join us now on Early Access and get a head start building the metaverse.",
-      thumbnailUrl: "https://img.youtube.com/vi/-g3gXKg_13w/0.jpg",
-      uploadDate: "2022-04-05",
-      duration: "PT1M25S",
-      publisher: {
-        "@type": "Organization",
-        name: "Cryptopia Inc.",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://cryptopia.com/icon-60.png",
-          width: 60,
-          height: 60,
-        },
-      },
-      contentUrl:
-        "https://drive.google.com/file/d/1NfrlQ_tzQFp4kyapCm244ZRV3TuTdFJd/view",
-      embedUrl: "https://www.youtube.com/embed/-g3gXKg_13w",
-    },
-  ]
-
   return (
     <MainLayout>
-      <SEO schemaMarkup={organizationSchemaMarkup} />
       <PageSection image={data.bg1}>
         <div className={styles.topSection}>
           <div onClick={toggle}>
@@ -352,3 +309,48 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => {
+  const organizationSchemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      name: "Cryptopia Inc.",
+      alternateName: "Cryptopia Metaverse",
+      url: "https://cryptopia.com",
+      logo: "https://cryptopia.com/icon-512.png",
+      sameAs: [
+        "https://www.facebook.com/cryptopiacom",
+        "https://twitter.com/Cryptopia_OFCL",
+        "https://www.instagram.com/cryptopia_official",
+        "https://www.youtube.com/c/CryptopiaOfficial",
+        "https://www.linkedin.com/company/cryptopiametaverse",
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: "Welcome to Cryptopia",
+      description:
+        "Ships are about to get real! Cryptopia's foundation has been laid and it's time to join a faction. Who will you be in the new world? What ethos do you follow? Join us now on Early Access and get a head start building the metaverse.",
+      thumbnailUrl: "https://img.youtube.com/vi/-g3gXKg_13w/0.jpg",
+      uploadDate: "2022-04-05",
+      duration: "PT1M25S",
+      publisher: {
+        "@type": "Organization",
+        name: "Cryptopia Inc.",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://cryptopia.com/icon-60.png",
+          width: 60,
+          height: 60,
+        },
+      },
+      contentUrl:
+        "https://drive.google.com/file/d/1NfrlQ_tzQFp4kyapCm244ZRV3TuTdFJd/view",
+      embedUrl: "https://www.youtube.com/embed/-g3gXKg_13w",
+    },
+  ]
+
+  return <SEO schemaMarkup={organizationSchemaMarkup} />
+}
